@@ -343,7 +343,7 @@ local function heplr(heplr)
 
                     oda(0.3,0.3,0.3)
                     fogend(2000)
-                    time(17.00)
+                    time(19.00)
                     brightness(0.7)
 
                 elseif rtx == "night" or rtx == "5" then
