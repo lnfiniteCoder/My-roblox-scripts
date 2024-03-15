@@ -1,0 +1,63 @@
+local function ct(message)
+
+    game.Players:Chat(message)
+
+end
+
+local supamount = 200
+
+local function heplr(player)
+    local ispam = false
+    player.Chatted:Connect(function(msg)
+        if player == game.Players.LocalPlayer then
+            if msg:sub(1,4) == "iyc " then
+                local iycmd = msg:sub(5)
+                execCmd(iycmd)
+            end
+
+            if msg:sub(1,8) == "samount " then
+
+                supamount = msg:sub(9)
+
+            end
+
+            if msg:sub(1,4) == "sup " then
+
+                local supcmd = msg:sub(5)
+
+                for i = 1,supamount do
+
+                    ct(supcmd)
+
+                end
+
+            end
+
+            if msg:sub(1,5) == "spam " then
+                local scmd = msg:sub(6)
+                ispam = true
+                while ispam do
+                    wait(0.1)
+                    ct(scmd)
+                end
+            elseif msg:lower() == "uns" then
+                ispam = false
+            end
+
+            if msg:sub(1,2) == "r " then
+
+                local runexecuting = msg:sub(2)
+
+            end
+        end
+    end)
+end
+for _, player in pairs(game.Players:GetPlayers()) do
+    heplr(player)
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    heplr(player)
+end)
+-- Auto execute
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
