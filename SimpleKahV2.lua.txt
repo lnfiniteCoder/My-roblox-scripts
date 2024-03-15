@@ -139,12 +139,8 @@ local function Regen()
 end
 
 local function adplr(player)
-    h("Welcome to the server, "..tostring(player.name))
-    if player == retards then
 
-        ct("simple vg")
-
-    end
+    h("Welcome to the server, "..tostring(player.Name))
 
 end
 ----
