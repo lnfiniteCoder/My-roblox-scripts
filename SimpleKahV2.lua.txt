@@ -26,32 +26,6 @@ local musicid = {
     9048375035  -- All dropping 8 bits
 }
 
-print(prefix.." is the prefix")
-local commands = {
-
-    "Potato (player) -- pmcrash",
-    "Re -- Short reset",
-    "regen -- Regens pads",
-    "nok/nok off -- Resets when you die, can be turned off",
-    "perias(player optional) -- Gives periastrons",
-    "admslayer(player optional) -- Gives Azure dragon magic slayer",
-    "pgun(player optional) -- Gives portal gun",
-    "ttt(player optional -- Tictactoe gear",
-    "trapmine(player optional) -- Trapmine gear",
-    "kp(player optional -- 2 Powerful gears",
-    "subz(player optional) -- Winter gears",
-    "tdagger(player optional) -- time dagger",
-    "vibe 1(relaxed scene) 2(fnaf) 3(taco) 4(All dropping 8 bits)",
-    "rtx 1(vibes) 2(morning) 3(afternoon) 4(sunset) 5(night)",
-    "to player -- teleports you to specified player",
-    "bring player -- brings a player",
-    "simple vg -- Vg crash",
-    "attach(wall attach) fattach(floor attach) fremove(floor remove) wremove(wall remove)",
-    "kitten player -- makes a player naked",
-    "antipunish(on/off)"
-
-}
-
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
 local adminpads = (adminf.Pads:GetChildren())
@@ -492,7 +466,7 @@ local function heplr(heplr)
 
                 local periastarget2 = m:sub(8) 
 
-                ct(prefix.."perias "..periastarget2)
+                ct(";perias "..periastarget2)
 
             elseif m:lower() == "perias" or m:lower() == prefix.."perias" then
 
@@ -516,7 +490,7 @@ local function heplr(heplr)
 
                 local admslayertarget2 = m:sub(11)
 
-                ct(prefix.."admslayer "..admslayertarget2)
+                ct(";admslayer "..admslayertarget2)
 
             elseif m:lower() == "admslayer" or m:lower() == prefix.."kp" then
 
@@ -534,7 +508,7 @@ local function heplr(heplr)
             elseif m:sub(1, 8) == "tdagger " then
 
                 local tmanipulator2 = m:sub(9)
-                ct(prefix.."tdagger "..tmanipulator2)
+                ct(";tdagger "..tmanipulator2)
 
             elseif m:lower() == prefix.."tdagger" or m:lower() == "tdagger" then
 
@@ -547,17 +521,12 @@ local function heplr(heplr)
             if m:sub(1, #prefix + 9) == prefix.."trapmine " then
 
                 local trapminer = m:sub(#prefix + 10)
-
-                for i = 1,5 do
-
-                    ct("gear "..trapminer.." 11999247")
-
-                end
+                ct("gear "..trapminer.." 11999247")
 
             elseif m:sub(1, 9) == "trapmine " then
 
                 local trapminer2 = m:sub(10)
-                ct(prefix.."trapmine "..trapminer2)
+                ct(";trapmine "..trapminer2)
 
             elseif m:lower() == prefix.."trapmine" or m:lower() == "trapmine" then
 
@@ -570,12 +539,12 @@ local function heplr(heplr)
             if m:sub(1, #prefix + 4) == prefix.."ttt " then
 
                 local tttplayer = m:sub(#prefix + 5)
-                ct("gear "..tttplayer.." 16924676")
+                ct("gear "..tttplayer.." 11999247")
 
             elseif m:sub(1, 4) == "ttt " then
 
                 local tttplayer2 = m:sub(5)
-                ct(prefix.."ttt "..tttplayer2)
+                ct(";ttt "..tttplayer2)
 
             elseif m:lower() == prefix.."ttt" or m:lower() == "ttt" then
 
@@ -587,13 +556,13 @@ local function heplr(heplr)
 
             if m:sub(1, #prefix + 5) == prefix.."pgun " then
 
-                local portalopener = m:sub(#prefix + 6)
+                local portalopener == m:sub(#prefix + 6)
                 ct("gear "..portalopener.." 34870758")
 
             elseif m:sub(1, 5) == "pgun " then
 
                 local portalopener2 = m:sub(6)
-                ct("gear "..portalopener2.." 34870758")
+                ct("pgun "..portalopener2)
 
             elseif m:lower() == prefix.."pgun" or m:lower() == "pgun" then
 
@@ -617,7 +586,7 @@ local function heplr(heplr)
 
                 local kptarget2 = m:sub(4)
 
-                ct(prefix.."kp "..kptarget2)
+                ct(";kp "..kptarget2)
 
             elseif m:lower() == "kp" or m:lower() == prefix.."kp" then
 
@@ -641,7 +610,7 @@ local function heplr(heplr)
 
                 local subztarget2 = m:sub(6)
 
-                ct(prefix.."subz "..subztarget2)
+                ct(";subz "..subztarget2)
 
             elseif m:lower() == prefix.."subz" or m:lower() == "subz" then
 
