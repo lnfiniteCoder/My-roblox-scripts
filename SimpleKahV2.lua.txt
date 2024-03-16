@@ -163,11 +163,6 @@ local function Regen()
 
 end
 
-local function adplr(player)
-
-    h("Welcome to the server, "..tostring(player.Name))
-
-end
 ----
 
 -- If statements
@@ -259,6 +254,18 @@ local function heplr(heplr)
             end
 
             ----
+
+            -- Cmds
+
+            if m:lower() == prefix.."cmds" then
+
+                for _, v in pairs(commands) do
+
+                    print(v)
+
+                end
+
+            end
 
             -- potato
 
@@ -491,7 +498,7 @@ local function heplr(heplr)
 
                 local periastarget2 = m:sub(8) 
 
-                ct(";perias "..periastarget2)
+                ct(prefix.."perias "..periastarget2)
 
             elseif m:lower() == "perias" or m:lower() == prefix.."perias" then
 
@@ -515,7 +522,7 @@ local function heplr(heplr)
 
                 local admslayertarget2 = m:sub(11)
 
-                ct(";admslayer "..admslayertarget2)
+                ct(prefix.."admslayer "..admslayertarget2)
 
             elseif m:lower() == "admslayer" or m:lower() == prefix.."kp" then
 
@@ -523,9 +530,86 @@ local function heplr(heplr)
 
             end
 
+            -- Time dagger
+
+            if m:sub(1, #prefix + 8) == prefix.."tdagger " then
+
+                local tmanipulator = m:sub(#prefix + 9)
+                ct("gear "..tmanipulator.." 71037101")
+
+            elseif m:sub(1, 8) == "tdagger " then
+
+                local tmanipulator2 = m:sub(9)
+                ct(prefix.."tdagger "..tmanipulator2)
+
+            elseif m:lower() == prefix.."tdagger" or m:lower() == "tdagger" then
+
+                ct("tdagger me")
+
+            end
+
+            -- Trapmine
+
+            if m:sub(1, #prefix + 9) == prefix.."trapmine " then
+
+                local trapminer = m:sub(#prefix + 10)
+
+                for i = 1,5 do
+
+                    ct("gear "..trapminer.." 11999247")
+
+                end
+
+            elseif m:sub(1, 9) == "trapmine " then
+
+                local trapminer2 = m:sub(10)
+                ct(prefix.."trapmine "..trapminer2)
+
+            elseif m:lower() == prefix.."trapmine" or m:lower() == "trapmine" then
+
+                ct("trapmine me")
+
+            end
+
+            --TicTacToe
+
+            if m:sub(1, #prefix + 4) == prefix.."ttt " then
+
+                local tttplayer = m:sub(#prefix + 5)
+                ct("gear "..tttplayer.." 16924676")
+
+            elseif m:sub(1, 4) == "ttt " then
+
+                local tttplayer2 = m:sub(5)
+                ct(prefix.."ttt "..tttplayer2)
+
+            elseif m:lower() == prefix.."ttt" or m:lower() == "ttt" then
+
+                ct("ttt me")
+
+            end
+
+            -- Portal Gun
+
+            if m:sub(1, #prefix + 5) == prefix.."pgun " then
+
+                local portalopener = m:sub(#prefix + 6)
+                ct("gear "..portalopener.." 34870758")
+
+            elseif m:sub(1, 5) == "pgun " then
+
+                local portalopener2 = m:sub(6)
+                ct("gear "..portalopener2.." 34870758")
+
+            elseif m:lower() == prefix.."pgun" or m:lower() == "pgun" then
+
+                ct("pgun me")
+
+            end
+
             -- Korblox sword and Pickaxe
 
-            if m:sub(#prefix, #prefix + 3) == prefix.."kp " then
+            if m:sub(1, #prefix + 3) == prefix.."kp " then
 
                 local kptarget = m:sub(#prefix + 4)
 
@@ -539,7 +623,7 @@ local function heplr(heplr)
 
                 local kptarget2 = m:sub(4)
 
-                ct(";kp "..kptarget2)
+                ct(prefix.."kp "..kptarget2)
 
             elseif m:lower() == "kp" or m:lower() == prefix.."kp" then
 
@@ -563,7 +647,7 @@ local function heplr(heplr)
 
                 local subztarget2 = m:sub(6)
 
-                ct(";subz "..subztarget2)
+                ct(prefix.."subz "..subztarget2)
 
             elseif m:lower() == prefix.."subz" or m:lower() == "subz" then
 
@@ -586,7 +670,7 @@ end
 game.Players.PlayerAdded:Connect(function(addedplr)
 
     heplr(addedplr)
-    adplr()
+    h("Welcome to the server, "..tostring(addedplr.Name))
 
 end)
 
@@ -658,7 +742,8 @@ local admingrab = coroutine.wrap(function()
             end
         end
 
-task.wait()
+    task.wait()
+
     end
 end)
 
