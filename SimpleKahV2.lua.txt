@@ -1,6 +1,33 @@
+
 wait(3)
 
-print("Prefix is ;")
+local antiabuse = true
+local antirocket = true
+local antidog = true
+local antipunish = true
+local antikill = true
+local anticrash = true
+local antiff = false
+local antigod = false
+local gb = false
+
+local SPlayers = game:GetService("Players")
+local Players = game.Players
+local lp = Players.LocalPlayer
+local lpchar = lp.Character
+local ScrOwner = "Ih0temyIife"
+local perm = false
+local prefix = ";"
+local pperm = false -- Players perm, further features
+local killbricks = {game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()}
+local musicid = {
+    1848354536, -- Relaxed scene
+    6913550990, -- fnaf
+    142376088,  -- Raining Tacos
+    9048375035  -- All dropping 8 bits
+}
+
+print(prefix.." is the prefix")
 
 local commands = {
 
@@ -25,33 +52,6 @@ local commands = {
     "kitten player -- makes a player naked",
     "antipunish(on/off)"
 
-}
-
-local antiabuse = true
-local antirocket = true
-local antidog = true
-local antipunish = true
-local antikill = true
-local anticrash = true
-local antiff = false
-local antigod = false
-local gb = false
-
-
-local SPlayers = game:GetService("Players")
-local Players = game.Players
-local lp = Players.LocalPlayer
-local lpchar = lp.Character
-local ScrOwner = "Ih0temyIife"
-local perm = false
-local prefix = ";"
-local pperm = false -- Players perm, further features
-local killbricks = {game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()}
-local musicid = {
-    1848354536, -- Relaxed scene
-    6913550990, -- fnaf
-    142376088,  -- Raining Tacos
-    9048375035  -- All dropping 8 bits
 }
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
@@ -168,7 +168,7 @@ end
 
 local function adplr(player)
 
-    h("Welcome to the server, "..tostring(player))
+    h("Welcome to the server, "..tostring(player.Name))
 
 end
 ----
@@ -224,6 +224,56 @@ local function heplr(heplr)
         end
 
         ----
+
+        if heplr == lp then
+  
+            -- Regen
+
+            if m:lower() == prefix.."regen" or m:lower() == "regen" then
+
+                Regen()
+        
+            end
+
+            -- Vibes
+
+            if m:sub(1, #prefix + 5) == prefix.."vibe " then
+
+                local vibe = m:sub(#prefix + 6)
+
+                if vibe == "rscene" or vibe == "1" then
+
+                    music(musicid[1])
+
+                elseif vibe == "fnaf" or vibe == "2"then
+
+                    music(musicid[2])
+
+                elseif vibe == "taco" or vibe == "3" then
+
+                    music(musicid[3])
+
+                elseif vibe == "8bits" or vibe == "4" then
+
+                    music(musicid[4])
+
+                end
+
+            end
+
+            ----
+
+            -- Super punish
+
+            if m:sub(1, #prefix + 8) == prefix.."spunish " then
+
+                local spunished = m:sub(#prefix + 9)
+                ct("setgrav "..spunished..." -9e15")
+                ct("punish "..spunished)
+                ct("blind "..spunished)
+                ct("pm "..spunished.." [SK]: You were super punished. Please join another server.")
+
+            end
 
             -- potato
 
@@ -289,18 +339,6 @@ local function heplr(heplr)
             end
 
             ----
-
-            --Cmds
-
-            if m:lower() == prefix.."cmds" then
-
-                for _, v in pairs(commands) do
-
-                    print(v)
-
-                end
-
-            end
 
             -- Nudes
 
