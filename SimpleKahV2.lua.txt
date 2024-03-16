@@ -556,7 +556,7 @@ local function heplr(heplr)
 
             if m:sub(1, #prefix + 5) == prefix.."pgun " then
 
-                local portalopener == m:sub(#prefix + 6)
+                local portalopener = m:sub(#prefix + 6)
                 ct("gear "..portalopener.." 34870758")
 
             elseif m:sub(1, 5) == "pgun " then
