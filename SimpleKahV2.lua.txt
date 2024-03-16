@@ -26,8 +26,6 @@ local musicid = {
     9048375035  -- All dropping 8 bits
 }
 
-print(prefix.."Is the prefix")
-
 local commands = {
 
     "Potato (player) -- pmcrash",
@@ -641,10 +639,10 @@ end
 -- Credits to dizzy for making this
 
 nokill()
+local admingrab = coroutine.wrap(function()
+    while true do
 
-while true do
-
-if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+        if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
             if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin") then
                 local pad = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head")
                 local padCFrame = game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild("Touch to get admin"):FindFirstChild("Head").CFrame
@@ -655,13 +653,14 @@ if not game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(g
                 task.wait()
                 pad.CFrame = padCFrame
                 pad.CanCollide = true
-          else
+            else
                 fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
-end
             end
+        end
 
 task.wait()
-end
+    end
+end)
 
 -- Credits to dizzy he made this code(mine didnt work properly)
 
@@ -669,4 +668,5 @@ end
 
 -- Autoexecute
 wait(3)
+print(prefix.."Is the prefix")
 h("The SimpleKAH V2 script has loaded, owner is "..tostring(ScrOwner))
