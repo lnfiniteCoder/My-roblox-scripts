@@ -290,12 +290,6 @@ local function heplr(heplr)
 
             --Cmds
 
-            if m:lower() == prefix.."cmds" then
-
-                print(commands)
-
-            end
-
             -- Nudes
 
             if m:sub(#prefix, #prefix + 7) == prefix.."kitten " then
