@@ -1,5 +1,7 @@
 wait(3)
 
+print("Prefix is ;")
+
 local antiabuse = true
 local antirocket = true
 local antidog = true
@@ -10,6 +12,30 @@ local antiff = false
 local antigod = false
 local gb = false
 
+local commands = {
+
+    "Potato (player) -- pmcrash",
+    "Re -- Short reset",
+    "regen -- Regens pads",
+    "nok/nok off -- Resets when you die, can be turned off",
+    "perias(player optional) -- Gives periastrons",
+    "admslayer(player optional) -- Gives Azure dragon magic slayer",
+    "pgun(player optional) -- Gives portal gun",
+    "ttt(player optional -- Tictactoe gear",
+    "trapmine(player optional) -- Trapmine gear",
+    "kp(player optional -- 2 Powerful gears",
+    "subz(player optional) -- Winter gears",
+    "tdagger(player optional) -- time dagger",
+    "vibe 1(relaxed scene) 2(fnaf) 3(taco) 4(All dropping 8 bits)",
+    "rtx 1(vibes) 2(morning) 3(afternoon) 4(sunset) 5(night)",
+    "to player -- teleports you to specified player",
+    "bring player -- brings a player",
+    "simple vg -- Vg crash",
+    "attach(wall attach) fattach(floor attach) fremove(floor remove) wremove(wall remove)",
+    "kitten player -- makes a player naked",
+    "antipunish(on/off)"
+
+}
 local SPlayers = game:GetService("Players")
 local Players = game.Players
 local lp = Players.LocalPlayer
@@ -261,6 +287,14 @@ local function heplr(heplr)
             end
 
             ----
+
+            --Cmds
+
+            if m:lower() == prefix.."cmds" then
+
+                print(commands)
+
+            end
 
             -- Nudes
 
