@@ -662,11 +662,13 @@ task.wait()
     end
 end)
 
+admingrab()
 -- Credits to dizzy he made this code(mine didnt work properly)
 
 ----
 
 -- Autoexecute
 wait(3)
-print(prefix.."Is the prefix")
-h("The SimpleKAH V2 script has loaded, owner is "..tostring(ScrOwner))
+
+print(prefix.." Is the prefix")
+h("The SimpleKAH V2 script has loaded")
