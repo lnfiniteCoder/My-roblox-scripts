@@ -544,7 +544,7 @@ local function heplr(heplr)
             if m:sub(1, #prefix + 4) == prefix.."ttt " then
 
                 local tttplayer = m:sub(#prefix + 5)
-                ct("gear "..tttplayer.." 11999247")
+                ct("gear "..tttplayer.." 16924676")
 
             elseif m:sub(1, 4) == "ttt " then
 
