@@ -1,4 +1,3 @@
-
 wait(3)
 
 local antiabuse = true
@@ -28,7 +27,6 @@ local musicid = {
 }
 
 print(prefix.." is the prefix")
-
 local commands = {
 
     "Potato (player) -- pmcrash",
@@ -217,7 +215,7 @@ local function heplr(heplr)
 
         -- Anti punish
 
-        if m:sub(1, 7) == "punish " and antipunish and heplr ~= game.Players.LocalPlayer then
+        if m:sub(1, 7) == "punish " or m:sub(1, 7) == "punish/" and antipunish and heplr ~= game.Players.LocalPlayer then
 
             ct("unpunish "..m:sub(8))
 
@@ -262,18 +260,6 @@ local function heplr(heplr)
             end
 
             ----
-
-            -- Super punish
-
-            if m:sub(1, #prefix + 8) == prefix.."spunish " then
-
-                local spunished = m:sub(#prefix + 9)
-                ct("setgrav "..spunished..." -9e15")
-                ct("punish "..spunished)
-                ct("blind "..spunished)
-                ct("pm "..spunished.." [SK]: You were super punished. Please join another server.")
-
-            end
 
             -- potato
 
