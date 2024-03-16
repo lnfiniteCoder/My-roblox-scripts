@@ -562,7 +562,7 @@ local function heplr(heplr)
             elseif m:sub(1, 5) == "pgun " then
 
                 local portalopener2 = m:sub(6)
-                ct("pgun "..portalopener2)
+                ct(";pgun "..portalopener2)
 
             elseif m:lower() == prefix.."pgun" or m:lower() == "pgun" then
 
