@@ -292,11 +292,7 @@ local function heplr(heplr)
 
             if m:lower() == prefix.."cmds" then
 
-                for i, v in pairs(commands) do
-
-                    print(i.." "..v)
-
-                end
+                print(commands)
 
             end
 
