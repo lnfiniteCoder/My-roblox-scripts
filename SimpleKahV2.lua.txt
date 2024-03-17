@@ -678,9 +678,9 @@ end)
 
 -- Actions
 
-if not adminf:FindFirstChild("Regen") then
+if not game:GetService(" Workspace").Terrain["_Game"].Workspace.Admin:FindFirstChild("Regen") then
 
-    game.Players.LocalPlayer:Kick(" Regen has not been found.")
+    game:Shutdown()
 
 end
 
