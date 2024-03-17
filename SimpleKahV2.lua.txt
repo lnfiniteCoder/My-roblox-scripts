@@ -168,7 +168,7 @@ end
 
 -- If statements
 
-if lpname ~= "asechka19872" then
+if lpname ~= "Ih0temyIife" then
 
     h("Hi, I'm "..tostring(lp)..", the skid, totally didn't steal from "..tostring(ScrOwner)..".")
     lpowner = false
