@@ -47,7 +47,8 @@ local commands = {
     "simple vg -- Vg crash",
     "attach(wall attach) fattach(floor attach) fremove(floor remove) wremove(wall remove)",
     "kitten player -- makes a player naked",
-    "antipunish(on/off)"
+    "antipunish(on/off)",
+    "spunish player -- Advanced punish"
 
 }
 
@@ -366,14 +367,12 @@ local function heplr(heplr)
             if m:sub(1, #prefix + 8) == prefix.."spunish " then
 
                 local sptarget = m:sub(#prefix + 9)
-                antipunish = false
 
                 ct("setgrav "..sptarget.." -9e15")
                 ct("punish "..sptarget)
                 ct("blind "..sptarget)
                 ct("pm "..sptarget.." [SK]: You have been super punished, please leave and join another server.")
                 Regen()
-                antipunish = on
 
             end
 
@@ -790,4 +789,4 @@ admingrab()
 wait(3)
 
 print(prefix.." Is the prefix")
-h("The SimpleKAH V2 script has loaded")
+h("The SimpleKAH V2 script has loaded, prefix ";", say ;cmds for cmds in console")
