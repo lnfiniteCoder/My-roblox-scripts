@@ -207,7 +207,7 @@ local function heplr(heplr)
 
     ---- Messages from other players
 
-        if heplr ~= lp
+        if heplr ~= lp then
 
         -- Anti punish
 
@@ -217,7 +217,7 @@ local function heplr(heplr)
 
                 if antipunish then
 
-                    ct("reset "..m:sub(8))
+                    ct("reset "..punishcancel)
 
                 end
 
