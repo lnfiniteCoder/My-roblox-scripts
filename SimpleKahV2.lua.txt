@@ -254,7 +254,7 @@ local function heplr(heplr)
 
                 local vibe = m:sub(#prefix + 6)
 
-                music(musicid[vibe])
+                music(musicid[tointeger(vibe)])
 
             end
 
