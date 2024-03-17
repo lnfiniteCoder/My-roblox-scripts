@@ -215,9 +215,17 @@ local function heplr(heplr)
 
                 local punishcancel = m:sub(8)
 
-                if antipunish then
+                if punishcancel ~= "me" then
 
-                    ct("reset "..punishcancel)
+                    if antipunish then
+
+                        ct("reset "..punishcancel)
+
+                    end
+
+                elseif punishcancel == "me" then
+
+                    ct("reset "..heplr)
 
                 end
 
