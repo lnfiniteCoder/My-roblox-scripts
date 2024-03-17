@@ -1,3 +1,4 @@
+
 wait(3)
 
 local antiabuse = true
@@ -20,13 +21,31 @@ local prefix = ";"
 local pperm = false -- Players perm, further features
 local killbricks = {game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()}
 local musicid = {
-    1848354536, -- Relaxed scene
-    6913550990, -- fnaf
-    142376088,  -- Raining Tacos
-    9048375035,  -- All dropping 8 bits
-    1836291936, -- Piano music(Its the name :skull:)
-    1836102253 -- Medieval fantasy
+    1848354536, 
+    6913550990,
+    142376088,
+    9048375035,
+    1836102253,
+    9042437001,
+    1837879082,
+    1841647093,
+    1836291936,
+    1840684529
 }
+
+local musicidnames = {
+    "184835453, -- Relaxed scene",
+    "6913550990 -- fnaf",
+    "142376088 -- Raining Tacos",
+    "9048375035  -- All dropping 8 bits",
+    "1836102253 -- Medieval fantasy",
+    "9042437001 -- Reflection",
+    "1837879082 -- Paradise falls",
+    "1841647093 -- Life in an Elevator",
+    "1836291936 -- Piano music",
+    "1840684529 -- Cool Vibes"
+}
+
 
 local commands = {
 
@@ -42,7 +61,7 @@ local commands = {
     "kp(player optional -- 2 Powerful gears",
     "subz(player optional) -- Winter gears",
     "tdagger(player optional) -- time dagger",
-    "vibe 1(relaxed scene) 2(fnaf) 3(taco) 4(All dropping 8 bits) 5(Piano Music) 6(Medieval fantasy)",
+    "vibe list, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
     "rtx 1(vibes) 2(morning) 3(afternoon) 4(sunset) 5(night)",
     "to player -- teleports you to specified player",
     "bring player -- brings a player",
@@ -254,7 +273,55 @@ local function heplr(heplr)
 
                 local vibe = m:sub(#prefix + 6)
 
-                music(musicid[tointeger(vibe)])
+                if vibe == "list" then
+
+                    for i, v in pairs(musicidnames)
+
+                        print(i..". "..v)
+
+                    end
+
+                elseif vibe == "1" then
+
+                    music(musicid[1])
+
+                elseif vibe == "2"then
+
+                    music(musicid[2])
+
+                elseif vvibe == "3" then
+
+                    music(musicid[3])
+
+                elseif vibe == "4" then
+
+                    music(musicid[4])
+
+                elseif vibe == "5" then
+
+                    music(musicid[5])
+
+                elseif vibe == "6" then
+
+                    music(musicid[6])
+
+                elseif vibe == "7" then
+
+                    music(musicid[7])
+
+                elseif vibe == "8"then
+
+                    music(musicid[8])
+
+                elseif vibe == "9" then
+
+                    music(musicid[9])
+
+                elseif vibe == "10" then
+
+                    music(musicid[10])
+
+                end
 
             end
 
