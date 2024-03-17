@@ -289,7 +289,7 @@ local function heplr(heplr)
 
                     music(musicid[2])
 
-                elseif vvibe == "3" then
+                elseif vibe == "3" then
 
                     music(musicid[3])
 
