@@ -678,7 +678,7 @@ end)
 
 -- Actions
 
-if not adminf:FindFirstChild("Regen")
+if not adminf:FindFirstChild("Regen") then
 
     game.Players.LocalPlayer:Kick(" Regen has not been found.")
 
