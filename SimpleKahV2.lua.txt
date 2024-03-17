@@ -23,7 +23,9 @@ local musicid = {
     1848354536, -- Relaxed scene
     6913550990, -- fnaf
     142376088,  -- Raining Tacos
-    9048375035  -- All dropping 8 bits
+    9048375035,  -- All dropping 8 bits
+    1836291936, -- Piano music(Its the name :skull:)
+    1836102253 -- Medieval fantasy
 }
 
 local commands = {
@@ -40,7 +42,7 @@ local commands = {
     "kp(player optional -- 2 Powerful gears",
     "subz(player optional) -- Winter gears",
     "tdagger(player optional) -- time dagger",
-    "vibe 1(relaxed scene) 2(fnaf) 3(taco) 4(All dropping 8 bits)",
+    "vibe 1(relaxed scene) 2(fnaf) 3(taco) 4(All dropping 8 bits) 5(Piano Music) 6(Medieval fantasy)",
     "rtx 1(vibes) 2(morning) 3(afternoon) 4(sunset) 5(night)",
     "to player -- teleports you to specified player",
     "bring player -- brings a player",
@@ -252,23 +254,7 @@ local function heplr(heplr)
 
                 local vibe = m:sub(#prefix + 6)
 
-                if vibe == "rscene" or vibe == "1" then
-
-                    music(musicid[1])
-
-                elseif vibe == "fnaf" or vibe == "2"then
-
-                    music(musicid[2])
-
-                elseif vibe == "taco" or vibe == "3" then
-
-                    music(musicid[3])
-
-                elseif vibe == "8bits" or vibe == "4" then
-
-                    music(musicid[4])
-
-                end
+                music(musicid[vibe])
 
             end
 
