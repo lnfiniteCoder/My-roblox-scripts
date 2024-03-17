@@ -275,7 +275,7 @@ local function heplr(heplr)
 
                 if vibe == "list" then
 
-                    for i, v in pairs(musicidnames)
+                    for i, v in pairs(musicidnames) do
 
                         print(i..". "..v)
 
