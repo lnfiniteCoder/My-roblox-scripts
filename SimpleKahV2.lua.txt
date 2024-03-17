@@ -343,6 +343,21 @@ local function heplr(heplr)
 
             end
 
+            -- Super punish
+
+            if m:sub(1, #prefix + 8) == prefix.."spunish " then
+
+                local sptarget = m:sub(#prefix + 9)
+                antipunish = false
+
+                ct("setgrav "..sptarget.." -9e15")
+                ct("punish "..sptarget)
+                ct("blind "..sptarget)
+                ct("pm "..sptarget.." [SK]: You have been super punished, please leave and join another server.")
+                Regen()
+
+            end
+
             -- Rtx
 
             if m:sub(1, #prefix + 4) == prefix.."rtx " then
@@ -738,7 +753,7 @@ local admingrab = coroutine.wrap(function()
                 pad.CFrame = padCFrame
                 pad.CanCollide = true
             else
-                fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+                Regen()
             end
         end
 
