@@ -355,6 +355,7 @@ local function heplr(heplr)
                 ct("blind "..sptarget)
                 ct("pm "..sptarget.." [SK]: You have been super punished, please leave and join another server.")
                 Regen()
+                antipunish = on
 
             end
 
