@@ -678,6 +678,12 @@ end)
 
 -- Actions
 
+if not adminf:FindFirstChild("Regen")
+
+    game.Players.LocalPlayer:Kick(" Regen has not been found.")
+
+end
+
 local gearban = coroutine.wrap(function()
 
     if gb then
