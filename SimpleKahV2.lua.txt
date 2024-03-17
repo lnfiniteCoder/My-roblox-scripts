@@ -207,11 +207,21 @@ local function heplr(heplr)
 
     ---- Messages from other players
 
+        if heplr ~= lp
+
         -- Anti punish
 
-        if m:sub(1, 7) == "punish " or m:sub(1, 7) == "punish/" and antipunish and heplr ~= game.Players.LocalPlayer then
+            if m:sub(1, 7) == "punish " or m:sub(1, 7) == "punish/" then
 
-            ct("unpunish "..m:sub(8))
+                local punishcancel = m:sub(8)
+
+                if antipunish then
+
+                    ct("reset "..m:sub(8))
+
+                end
+
+            end
 
         end
 
