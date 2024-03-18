@@ -993,7 +993,7 @@ local function heplr(heplr)
 
                 ct("pm me You will be given a SpyEye to fix your camera when naming, use it")
 
-                if m:sub(2, 5) == "!list" then
+                if m:sub(2, 5) == "list" then
 
                     print("!category character, type !category list for their characters")
 
