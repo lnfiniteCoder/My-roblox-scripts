@@ -30,20 +30,101 @@ local musicid = {
     1837879082,
     1841647093,
     1836291936,
-    1840684529
+    1840684529,
+    1838457617,
+    1838325247,
+    1843686155,
+    1836253797,
+    1841118237,
+    1837768517,
+    9046862941,
+    1846458016,
+    1846575559,
+    1838974004,
+    1838948821,
+    1837303498,
+    9048464036,
+    9044560778,
+    1838635121,
+    9045766377,
+    1841979451,
+    1838948653,
+    1837429944,
+    1839841807,
+    9046435309,
+    1837174238,
+    1839209902,
+    1835852163,
+    1842241530,
+    1836842889,
+    1837853076,
+    1839857296,
+    9046863253,
+    1846368080,
+    7028518546,
+    9046865270,
+    1844272089,
+    7023861220,
+    1843700415,
+    1839906422,
+    1836807218,
+    1840434123,
+    1837324500,
+    1840684208
 }
 
 local musicidnames = {
-    "184835453, -- Relaxed scene",
-    "6913550990 -- fnaf",
+    "184835453 -- Relaxed scene",
+    "6913550990 -- Fnaf 2",
     "142376088 -- Raining Tacos",
-    "9048375035  -- All dropping 8 bits",
+    "9048375035 -- All dropping 8 bits",
     "1836102253 -- Medieval fantasy",
     "9042437001 -- Reflection",
     "1837879082 -- Paradise falls",
     "1841647093 -- Life in an Elevator",
     "1836291936 -- Piano music",
-    "1840684529 -- Cool Vibes"
+    "1840684529 -- Cool Vibes",
+    "1838457617 -- Clair de lune",
+    "1838325247 -- Music of time",
+    "1843686155 -- Into mourning",
+    "1836253797 -- Sweet Sorrow",
+    "1841118237 -- Song of loss",
+    "1837768517 -- Bossa Me(a)",
+    "9046862941 -- Sunset chill(Bed version)",
+    "1846458016 -- No more",
+    "1846575559 -- Diamonds",
+    "1838974004 -- Mysterious",
+    "1838948821 -- Natural environment",
+    "1837303498 -- Taking time to alternate version 2",
+    "9048464036 -- Cold winter",
+    "9044560778 -- When stars collide",
+    "1838635121 -- Sad end",
+    "9045766377 -- Gymnopedie 1",
+    "1841979451 -- Piano bar jazz(a)",
+    "1838948653 -- Green Area",
+    "1837429944 -- Soft music",
+    "1839841807 -- Relax(c)",
+    "9046435309 -- The still, Sad music of humanity",
+    "1837174238 -- Remembrance",
+    "1839209902 -- Tender Score",
+    "1835852163 -- Memories of love",
+    "1837978392 -- For the kids",
+    "1842241530 -- Lazy sunday",
+    "1836842889 -- Solar flares",
+    "1837853076 -- See you in hell",
+    "1839857296 -- Convenience store",
+    "9046863253 -- Poolside",
+    "1846368080 -- Stadium Rave",
+    "7028518546 -- Protostar - New horizons",
+    "9046865270 -- Glowing light(Bed version)",
+    "1844272089 -- Positive Calm",
+    "7023861220 -- Half an Orange - Video games",
+    "1843700415 -- Creepy",
+    "1839906422 -- Medieval Castle",
+    "1836807218 -- A heart worth saving",
+    "1840434123 -- Hotel deluxe",
+    "1837324500 -- Sunrise workout",
+    "1840684208 -- Playground of the stars(A)"
 }
 
 
@@ -61,7 +142,7 @@ local commands = {
     "kp(player optional -- 2 Powerful gears",
     "subz(player optional) -- Winter gears",
     "tdagger(player optional) -- time dagger",
-    "vibe list, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+    "vibe number -- Plays a music, say vibe list for list of musics",
     "rtx 1(vibes) 2(morning) 3(afternoon) 4(sunset) 5(night)",
     "to player -- teleports you to specified player",
     "bring player -- brings a player",
@@ -320,6 +401,166 @@ local function heplr(heplr)
                 elseif vibe == "10" then
 
                     music(musicid[10])
+
+                elseif vibe == "11" then
+
+                    music(musicid[11])
+
+                elseif vibe == "12" then
+
+                    music(musicid[12])
+
+                elseif vibe == "13" then
+
+                    music(musicid[13])
+
+                elseif vibe == "14" then
+
+                    music(musicid[14])
+
+                elseif vibe == "15" then
+
+                    music(musicid[15])
+
+                elseif vibe == "16" then
+
+                    music(musicid[16])
+
+                elseif vibe == "17" then
+
+                    music(musicid[17])
+
+                elseif vibe == "18" then
+
+                    music(musicid[18])
+
+                elseif vibe == "19" then
+
+                    music(musicid[19])
+
+                elseif vibe == "20" then
+
+                    music(musicid[20])
+
+                elseif vibe == "21" then
+
+                    music(musicid[21])
+
+                elseif vibe == "22" then
+
+                    music(musicid[22])
+
+                elseif vibe == "23" then
+
+                    music(musicid2[3])
+
+                elseif vibe == "24" then
+
+                    music(musicid[24])
+
+                elseif vibe == "25" then
+
+                    music(musicid[25])
+
+                elseif vibe == "26" then
+
+                    music(musicid[26])
+
+                elseif vibe == "27" then
+
+                    music(musicid[27])
+
+                elseif vibe == "28" then
+
+                    music(musicid[28])
+
+                elseif vibe == "29" then
+
+                    music(musicid[29])
+
+                elseif vibe == "30" then
+
+                    music(musicid[30])
+
+                elseif vibe == "31" then
+
+                    music(musicid[31])
+
+                elseif vibe == "32" then
+
+                    music(musicid[32])
+
+                elseif vibe == "33" then
+
+                    music(musicid[33])
+
+                elseif vibe == "34" then
+
+                    music(musicid[34])
+
+                elseif vibe == "35" then
+
+                    music(musicid[35])
+
+                elseif vibe == "36" then
+
+                    music(musicid[36])
+
+                elseif vibe == "37" then
+
+                    music(musicid[37])
+
+                elseif vibe == "38" then
+
+                    music(musicid[38])
+
+                elseif vibe == "39" then
+
+                    music(musicid[39])
+
+                elseif vibe == "40" then
+
+                    music(musicid[40])
+
+                elseif vibe == "41" then
+
+                    music(musicid[41])
+
+                elseif vibe == "42" then
+
+                    music(musicid[42])
+
+                elseif vibe == "43" then
+
+                    music(musicid[43])
+
+                elseif vibe == "44" then
+
+                    music(musicid[44])
+
+                elseif vibe == "45" then
+
+                    music(musicid[45])
+
+                elseif vibe == "46" then
+
+                    music(musicid[46])
+
+                elseif vibe == "47" then
+
+                    music(musicid[47])
+
+                elseif vibe == "48" then
+
+                    music(musicid[48])
+
+                elseif vibe == "49" then
+
+                    music(musicid[49])
+
+                elseif vibe == "50" then
+
+                    music(musicid[50])
 
                 end
 
