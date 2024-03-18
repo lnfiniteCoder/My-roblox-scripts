@@ -151,7 +151,8 @@ local commands = {
     "attach(wall attach) fattach(floor attach) fremove(floor remove) wremove(wall remove)",
     "kitten player -- makes a player naked",
     "antipunish(on/off)",
-    "spunish player -- Advanced punish"
+    "spunish player -- Advanced punish",
+    "! -- Transforms you into a character with extra add ups, say !list for these kind of characters"
 
 }
 
@@ -189,6 +190,30 @@ end
 local function music(id)
 
     ct("music "..id)
+
+end
+
+local function hat(player, id)
+
+    ct("hat "..player.." "..id)
+
+end
+
+local function shirt(player, id)
+
+    ct("shirt "..player.." "..id)
+
+end
+
+local function pants(player, id)
+
+    ct("pants "..player.." "..id)
+
+end
+
+local function char(player, id)
+
+    ct("char "..player.." "..id)
 
 end
 
@@ -269,37 +294,6 @@ end
 
 ----
 
--- If statements
-
-if lpname ~= "Ih0temyIife" then
-
-    h("Hi, I'm "..tostring(lp)..", the skid, totally didn't steal from "..tostring(ScrOwner)..".")
-    lpowner = false
-    Ownerhere = false
-
-    local OwnerCheck = coroutine.wrap(function()
-    
-        while not Ownerhere do
-
-            if game.Players:FindFirstChild(ScrOwner) then
-
-                h(tostring(ScrOwner).." Owner of Simplekah V2 has joined")
-                local Ownerhere = true
-                coroutine.yield(OwnerCheck)
-
-            end
-
-        end
-
-    end)
-
-else
-
-    lpowner = true
-
-end
-
-----
 
 -- Setup
 
@@ -988,6 +982,60 @@ local function heplr(heplr)
             end
 
             ----
+
+            -- Special Characters
+
+            if m:sub(1,1) == "!" then
+
+                local scharcatg = {
+                    "cc"
+                }
+
+                ct("pm me You will be given a SpyEye to fix your camera when naming, use it")
+
+                if m:sub(2, 5) == "!list" then
+
+                    print("!category character, type !category list for their characters")
+
+                    for i, v in pairs(scharcatg) do
+
+                        print(i..". "..v)
+
+                    end
+
+                elseif m:sub(2, 4) == "cc " then
+
+                    local ccchar = m:sub(5) 
+                    local ccchars = {
+                        "CDestroyer"
+                    }
+
+                    if ccchar == "list" then
+
+                        for i, v in pairs(ccchars) do
+
+                            print(i..". "..v")
+
+                        end
+
+                    elseif ccchar == "CDestroyer" then
+
+                        music("1845828863")
+                        char("me", "469673169")
+                        ct("name me Cube Destroyer")
+                        ct("gear me 79736563")
+                        ct("health me 2600")
+                        ct("gear me 96669697")
+                        ct("size me 1,2")
+                        ct("speed me 15")
+                        ct("trapmine")
+                        ct("h \n\nCube Destroyer has been executed")
+
+                    end
+
+                end
+
+            end
 
         end
     end)
