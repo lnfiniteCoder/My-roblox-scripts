@@ -21,7 +21,7 @@ local prefix = ";"
 local pperm = false -- Players perm, further features
 local killbricks = {game:GetService("Workspace").Terrain["_Game"].Workspace.Obby:GetChildren()}
 local musicid = {
-    1848354536, 
+    184835453,
     6913550990,
     142376088,
     9048375035,
@@ -55,6 +55,7 @@ local musicid = {
     1837174238,
     1839209902,
     1835852163,
+    1837978392,
     1842241530,
     1836842889,
     1837853076,
@@ -561,6 +562,10 @@ local function heplr(heplr)
                 elseif vibe == "50" then
 
                     music(musicid[50])
+
+                elseif vibe == "51" then
+
+                    music(musicid[51])
 
                 end
 
