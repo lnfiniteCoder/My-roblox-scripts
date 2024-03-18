@@ -1014,7 +1014,7 @@ local function heplr(heplr)
 
                         for i, v in pairs(ccchars) do
 
-                            print(i..". "..v")
+                            print(i..". "..v)
 
                         end
 
