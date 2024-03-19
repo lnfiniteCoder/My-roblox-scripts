@@ -1008,6 +1008,7 @@ local function heplr(heplr)
                     local ccchar = m:sub(5) 
                     local ccchars = {
                         "CDestroyer"
+                        "Cryo"
                     }
 
                     if ccchar == "list" then
@@ -1030,6 +1031,24 @@ local function heplr(heplr)
                         ct("speed me 15")
                         ct("trapmine")
                         ct("h \n\nCube Destroyer has been executed")
+
+                    elseif ccchar == "Cryo" then
+
+                        music("1842872204")
+                        char("me", "4760345211")
+                        ct("name me Cryo")
+                        ct("health me 30000")
+                        ct("gear me 261439002")
+                        ct("gear me 1241586091")
+                        ct("gear me 2605966484")
+                        ct("gear me 101078559")
+                        ct("subz")
+                        ct("size me 1.3")
+                        ct("speed me 17")
+                        fogend("500")
+                        fogcolor("0, 160, 200")
+                        ambient("0, 160, 200")
+                        ct("h \n\nCryo has been executed")
 
                     end
 
