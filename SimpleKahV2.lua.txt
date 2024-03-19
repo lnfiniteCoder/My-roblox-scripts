@@ -1007,7 +1007,7 @@ local function heplr(heplr)
 
                     local ccchar = m:sub(5) 
                     local ccchars = {
-                        "CDestroyer"
+                        "CDestroyer",
                         "Cryo"
                     }
 
