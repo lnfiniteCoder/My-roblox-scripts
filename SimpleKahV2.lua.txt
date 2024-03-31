@@ -178,7 +178,7 @@ local Ownerhere = true
 local lpname = lp.Name
 local whitelist = {"Raysdamain", "asechka198720", "asechka19872"}
 local crashonretardjoin = true
-local retards = {"atprog", "icestuds", "hudhejeir"}
+local retards = {"atprog", "icestuds"}
 
 -- Functions
 
