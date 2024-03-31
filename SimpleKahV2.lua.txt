@@ -9,6 +9,7 @@ local antikill = true
 local anticrash = true
 local antiff = false
 local antigod = false
+local antipm = true
 local gb = false
 
 local SPlayers = game:GetService("Players")
@@ -598,6 +599,18 @@ local function heplr(heplr)
 
             end
 
+            --Antipm
+
+            if m:lower() == prefix.."antipm" then
+
+                antipm = true
+
+            elseif m:lower() == prefix.."antipm off" then
+
+                antipm = false
+
+            end
+
             -- Gearban
 
             if m:lower() == prefix.."gb" then
@@ -1079,13 +1092,17 @@ end)
 
 local gearban = coroutine.wrap(function()
 
-    if gb then
+    while task.wait() do
 
-        for _, v in pairs(game.Players:GetPlayers()) do
+        if gb then
 
-            if v.Backpack:GetChildren() > 0 and v.Name ~= whitelist and v ~= game.Players.LocalPlayer then
+            for _, v in pairs(game.Players:GetPlayers()) do
 
-                ct("ungear "..v.Name)
+                if v.Backpack:GetChildren() > 0 and v.Name ~= whitelist and v ~= game.Players.LocalPlayer then
+
+                    ct("ungear "..tostring(v.Name))
+
+                end
 
             end
 
@@ -1096,6 +1113,27 @@ local gearban = coroutine.wrap(function()
 end)
 
 gearban()
+
+local antipm = coroutine.wrap(function()
+
+    while task.wait() do
+
+        if antipm then
+
+            if game.Players.LocalPlayer.PlayerGUI:FindFirstChild("MessageGUI") then
+
+                local pmgui = game.Players.LocalPlayer.PlayerGUI.MessageGUI
+                pmgui:Destroy()
+
+            end
+
+        end
+
+    end
+
+end)
+
+antipm()
 
 local nokill = coroutine.wrap(function()
 
