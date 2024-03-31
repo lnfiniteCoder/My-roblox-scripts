@@ -1120,9 +1120,9 @@ local antipm = coroutine.wrap(function()
 
         if antipm then
 
-            if game.Players.LocalPlayer.PlayerGUI:FindFirstChild("MessageGUI") then
+            if game.Players.LocalPlayer.PlayerGui:FindFirstChild("MessageGUI") then
 
-                local pmgui = game.Players.LocalPlayer.PlayerGUI.MessageGUI
+                local pmgui = game.Players.LocalPlayer.PlayerGui.MessageGUI
                 pmgui:Destroy()
 
             end
