@@ -15,6 +15,13 @@ local function heplr(player)
                 execCmd(iycmd)
             end
 
+            if msg:sub(1,6) == "print " then
+
+                local cprint = msg:sub(7)
+                print(cprint)
+
+            end
+
             if msg:sub(1,8) == "samount " then
 
                 supamount = msg:sub(9)
