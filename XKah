@@ -1,6 +1,7 @@
 wait(1)
 
 local owner = "Ih0temyIife"
+local prefix = ";"
 
 local antidog = true
 local antirocket = true
