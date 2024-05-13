@@ -11,4 +11,99 @@ local antipunish = true
 local antisetgrav = true
 local antifreeze = true
 
-local function hat(id)
+local function ct(chat)
+
+  game.Players:Chat(chat)
+
+end
+
+local function hat(victim, id)
+
+  ct("hat "..victim.." "..id)
+
+end
+
+local function char(victim, id)
+
+  ct("char "..victim.." "..id)
+
+end
+
+local function pants(victim, id)
+
+  ct("pants "..victim.." "..id)
+
+end
+
+local function shirt(victim, id)
+
+  ct("shirt "..victim.." "..id)
+
+end
+
+local function oda(n1, n2, n3)
+
+  ct("outdoorambient "..n1.." "..n2.." "..n3)
+
+end
+
+local function ambient(n1, n2, n3)
+
+  ct("ambient "..n1.." "..n2.." "..n3)
+
+end
+
+local function csb(n1, n2, n3)
+
+  ct("colorshiftbottom "..n1.." "..n2.." "..n3)
+
+end
+
+local function cst(n1, n2, n3)
+
+  ct("colorshifttop "..n1.." "..n2.." "..n3)
+
+end
+
+local function fogstart(n)
+
+  ct("fogstart "..n)
+
+end
+
+local funtion fogend(n)
+
+  ct("fogend "..n)
+
+end
+
+local function gear(victim, id)
+
+  ct("gear "..victim.." "..id)
+
+end
+
+local function h(msg)
+
+  ct("h "..msg)
+
+end
+
+local function m(msg)
+
+  ct("m "..msg)
+
+end
+
+local function pm(victim, msg)
+
+  ct("pm "..victim.." "..msg)
+
+end
+local function welcomemessage(player)
+
+  h("\n\nWelcome, "..tostring(player))
+
+end
+
+h("XKah got loaded, creator is Ih0temyIife, prefix is ; (the script is W.I.P)")
