@@ -1,4 +1,4 @@
-
+Officially discontinued
 wait(3)
 
 local antiabuse = true
@@ -1193,4 +1193,4 @@ admingrab()
 wait(3)
 
 print(prefix.." Is the prefix")
-h("The SimpleKAH V2 script has loaded, prefix is "..prefix..", say "..prefix.."cmds for cmds in console")
+h("The SimpleKAH V2 script has loaded, prefix is "..prefix..", say "..prefix.."cmds for cmds in console(Discontinued by Ih0temyIife)")
