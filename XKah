@@ -72,7 +72,7 @@ local function fogstart(n)
 
 end
 
-local funtion fogend(n)
+local function fogend(n)
 
   ct("fogend "..n)
 
