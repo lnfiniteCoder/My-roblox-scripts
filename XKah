@@ -1,1 +1,14 @@
+wait(1)
 
+local owner = "Ih0temyIife"
+
+local antidog = true
+local antirocket = true
+local antijail = true
+local antifreeze = true
+local antikill = true
+local antipunish = true
+local antisetgrav = true
+local antifreeze = true
+
+local function hat(id)
