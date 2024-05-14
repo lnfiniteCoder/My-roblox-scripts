@@ -143,5 +143,7 @@ local admingrab = coroutine.wrap(function()
 
     end
 
-h("XKah got loaded, creator is Ih0temyIife, prefix is ; (the script is W.I.P)")
+end)
+
+h("h got loaded, creator is Ih0temyIife, prefix is ; (the script is W.I.P)")
 print("XKah got loaded.")
