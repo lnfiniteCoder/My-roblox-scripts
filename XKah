@@ -120,6 +120,10 @@ local function welcomemessage(player)
 
 end
 
+for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
+        Bricks.CanTouch = false
+end
+
 local admingrab = coroutine.wrap(function()
     while true do
 
