@@ -17,6 +17,7 @@ local antifreeze = true
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
 local adminpads = adminf.Pads:GetChildren()
+local players = game.Players
 
 local function ct(chat)
 
@@ -119,6 +120,40 @@ local function welcomemessage(player)
   h("\n\nWelcome, "..tostring(player))
 
 end
+
+local function heplr(hplr)
+
+  Players.Chatted:Connect(function(m)
+
+    local command = m:split[1]
+    local args = m:split[2]
+
+    if hplr == Players.LocalPlayer then
+
+      if command == "re" then
+
+        ct("reset me")
+
+      end
+
+    end
+
+  end)
+
+end
+
+for _, player in pairs(game.Players:GetPlayers()) do
+
+  heplr(player)
+
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+
+  heplr(player)
+  welcomemessage(player)
+
+end)
 
 for _, Bricks in pairs(game:GetService("Workspace").Terrain._Game.Workspace.Obby:GetChildren()) do
         Bricks.CanTouch = false
