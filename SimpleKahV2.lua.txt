@@ -1,4 +1,4 @@
-Officially discontinued
+-- Officially discontinued
 wait(3)
 
 local antiabuse = true
