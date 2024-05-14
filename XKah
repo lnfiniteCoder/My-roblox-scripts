@@ -123,12 +123,12 @@ end
 
 local function heplr(hplr)
 
-  hplr.Chatted:Connect(function(m)
+  players.Chatted:Connect(function(m)
 
     local command = m:split(1)
     local args = m:split(2)
 
-    if hplr == Players.LocalPlayer then
+    if hplr == players.LocalPlayer then
 
       if command == "re" then
 
@@ -148,7 +148,7 @@ for _, player in pairs(game.Players:GetPlayers()) do
 
 end
 
-Players.PlayerAdded:Connect(function(player)
+players.PlayerAdded:Connect(function(player)
 
   heplr(player)
   welcomemessage(player)
