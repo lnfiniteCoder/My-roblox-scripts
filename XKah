@@ -179,7 +179,7 @@ local function heplr(hplr)
             local touchedplayername = touchedplayer.Name
             ct("kill "..touchedplayername)
 
-          end
+          end)
 
         end
 
