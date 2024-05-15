@@ -159,6 +159,7 @@ local function heplr(hplr)
         for i = 1,200 do
 
           ct("explode "..args)
+          wait(0.5)
 
         end
 
