@@ -130,6 +130,12 @@ local function heplr(hplr)
 
     if hplr == players.LocalPlayer then
 
+      if command == "regen" then
+
+        Regen()
+
+      end
+
       if command == "re" then
 
         ct("reset me")
