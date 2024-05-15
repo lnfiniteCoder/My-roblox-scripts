@@ -3,7 +3,6 @@ wait(1)
 -- Credits to: Dizzy
 
 local owner = "Ih0temyIife"
-local prefix = ";"
 
 local antidog = true
 local antirocket = true
@@ -214,5 +213,9 @@ local admingrab = coroutine.wrap(function()
 end)
 admingrab()
 
-h("h XKah got loaded, creator is Ih0temyIife, prefix is ; (the script is W.I.P)")
+if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
+
+  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is " " \n\n(the script is W.I.P)")
+
+end
 print("XKah got loaded.")
