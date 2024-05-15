@@ -164,6 +164,12 @@ local function heplr(hplr)
 
       end
 
+      if command == "kitten" then
+
+        char(args, 5662686870)
+
+      end
+
     end
 
   end)
