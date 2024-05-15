@@ -18,6 +18,17 @@ local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("R
 local adminpads = adminf.Pads:GetChildren()
 local players = game.Players
 
+local cmds = {
+
+"xcmds --cmds",
+"regen --regens pads",
+"re --reset me",
+"nuke player --explodes specified player",
+"kitten player --makes the player naked",
+"gscript --loads gscript"
+
+}
+
 local function ct(chat)
 
   game.Players:Chat(chat)
@@ -135,6 +146,16 @@ local function heplr(hplr)
 
     if hplr == players.LocalPlayer then
 
+      if command == "xcmds" then
+
+        for i, v in ipairs(cmds) do
+
+          print(i..". "..v)
+
+        end
+
+      end
+
       if command == "regen" then
 
         Regen()
@@ -227,6 +248,6 @@ admingrab()
 
 wait(2)
 
-  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n\n(the script is W.I.P)")
+  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n\nSay xcmds for cmds \n\n(the script is W.I.P)")
 
 print("XKah got loaded.")
