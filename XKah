@@ -219,9 +219,6 @@ local admingrab = coroutine.wrap(function()
 end)
 admingrab()
 
-if game:GetService("Workspace").Terrain["_Game"].Admin.Pads:FindFirstChild(game.Players.LocalPlayer.Name .. "'s admin") then
-
   h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is " " \n\n(the script is W.I.P)")
 
-end
 print("XKah got loaded.")
