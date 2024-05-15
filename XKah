@@ -165,30 +165,6 @@ local function heplr(hplr)
 
       end
 
-      if command == "tod" then
-
-        local tod = true
-
-        while tod do
-
-          wait()
-          if game.Players.LocalPlayer.Character.Touched:Connect(function(humanoid)
-
-            
-            local touchedplayer = humanoid.Parent.Parent
-            local touchedplayername = touchedplayer.Name
-            ct("kill "..touchedplayername)
-
-          end)
-
-        end
-
-      elseif command == "untod" then
-
-        tod = false
-
-      end
-
     end
 
   end)
