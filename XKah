@@ -125,8 +125,8 @@ local function heplr(hplr)
 
   hplr.Chatted:Connect(function(m)
 
-    local command = m:split(1)
-    local args = m:split(2)
+    local command = m:split(1):lower()
+    local args = m:split(2):lower()
 
     if hplr == players.LocalPlayer then
 
