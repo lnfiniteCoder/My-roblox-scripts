@@ -124,7 +124,7 @@ end
 local function heplr(hplr)
 
   hplr.Chatted:Connect(function(m)
-    local splitter = string.split(m, " ")
+    local splitter = m:split(" ")
     local command = string.split(m[1])
     local args = string.split(m[2])
 
