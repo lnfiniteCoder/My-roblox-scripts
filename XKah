@@ -172,9 +172,12 @@ local function heplr(hplr)
         while tod do
 
           wait()
-          if players.LocalPlayer.Character.Touched:Connect(function(humanoid)
+          if game.Players.LocalPlayer.Character.Touched:Connect(function(humanoid)
 
-            ct("kill "..humanoid.Parent.Parent.Name)
+            
+            local touchedplayer = humanoid.Parent.Parent
+            local touchedplayername = touchedplayer.Name
+            ct("kill "..touchedplayername)
 
           end
 
