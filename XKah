@@ -167,6 +167,8 @@ local function heplr(hplr)
       if command == "kitten" then
 
         char(args, 5662686870)
+        ct("unpants "..args)
+        ct("unshirt "..args)
 
       end
 
@@ -219,6 +221,8 @@ local admingrab = coroutine.wrap(function()
 end)
 admingrab()
 
-  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is " " \n\n(the script is W.I.P)")
+wait(2)
+
+  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n\n(the script is W.I.P)")
 
 print("XKah got loaded.")
