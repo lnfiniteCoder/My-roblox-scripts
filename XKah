@@ -170,6 +170,7 @@ local function heplr(hplr)
         wait(1)
         ct("unpants "..args)
         ct("unshirt "..args)
+        ct("removetshirt "..args)
         wait()
         ct("tp "..args.." me")
 
