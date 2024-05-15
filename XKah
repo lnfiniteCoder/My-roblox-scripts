@@ -85,6 +85,12 @@ local function fogstart(n)
 
 end
 
+local function fogcolor(n1, n2, n3)
+
+  ct("fogend "..n1.." "..n2.." "..n3)
+
+end
+
 local function fogend(n)
 
   ct("fogend "..n)
