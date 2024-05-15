@@ -167,9 +167,11 @@ local function heplr(hplr)
       if command == "kitten" then
 
         char(args, 5662686870)
-        wait(0.1)
+        wait(1)
         ct("unpants "..args)
         ct("unshirt "..args)
+        wait()
+        ct("tp "..args.." me")
 
       end
 
