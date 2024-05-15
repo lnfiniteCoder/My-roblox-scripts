@@ -154,6 +154,16 @@ local function heplr(hplr)
 
       end
 
+      if command == "nuke" then
+
+        for i = 1,200 do
+
+          ct("explode "..args)
+
+        end
+
+      end
+
     end
 
   end)
