@@ -136,6 +136,12 @@ local function heplr(hplr)
 
       end
 
+      if command == "gscript" then
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/General_Scripts_D_E_L_T_A.txt"))()
+
+      end
+
     end
 
   end)
