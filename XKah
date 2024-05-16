@@ -187,6 +187,20 @@ local function heplr(hplr)
 
       end
 
+      if command == "game:Delete()" then
+
+        local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+
+          ct("spam gear all 94794847")
+          ct("spam size all 0.3")
+
+          while wait() do
+
+            game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
+            for _, v in pairs(Backpack:GetChildren()) do
+
+              local Parent = v.Parent
+
       if command == "pmkick" then
 
         ct("spam pm "..args.." Rip lil bro, you are getting kicked, join another server \n\n Skibidi bop bop bop yes yes true sigma moment skibid ohio rizzler \n\n Blade ball music g-man scientist ohio toilet sigma alpha hybrid rizzler. \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo ")
