@@ -199,7 +199,6 @@ local function heplr(hplr)
             game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
             for _, v in pairs(Backpack:GetChildren()) do
 
-              local v.Parent = game.Players.LocalPlayer.Character
               v:Activate()
 
             end
