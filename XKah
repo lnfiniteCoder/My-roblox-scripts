@@ -4,6 +4,8 @@ wait(1)
 
 local owner = "Ih0temyIife"
 
+local autogsc = true
+
 local antidog = true
 local antirocket = true
 local antijail = true
@@ -185,6 +187,12 @@ local function heplr(hplr)
 
       end
 
+      if command == "pmkick" then
+
+        ct("spam pm "..args.." Rip lil bro, you are getting kicked, join another server \n\n Skibidi bop bop bop yes yes true sigma moment skibid ohio rizzler \n\n Blade ball music g-man scientist ohio toilet sigma alpha hybrid rizzler. \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo \n\n fjifhzuafhfuhgfz8whgfuijhn87ujaetgnrigu8hrangw8ao07fo ")
+
+      end
+
       if command == "kitten" then
 
         char(args, 5662686870)
@@ -251,3 +259,7 @@ wait(2)
   h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n\nSay xcmds for cmds \n\n(the script is W.I.P)")
 
 print("XKah got loaded.")
+
+if autogsc then
+  ct("gscript")
+end
