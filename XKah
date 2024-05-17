@@ -214,7 +214,7 @@ local function heplr(hplr)
 
         equip()
 
-        ct("size me 0.3")
+        ct("spam size me 0.3")
 
       end
 
