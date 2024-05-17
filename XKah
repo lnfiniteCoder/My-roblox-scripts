@@ -27,7 +27,11 @@ local cmds = {
 "re --reset me",
 "nuke player --explodes specified player",
 "kitten player --makes the player naked",
-"gscript --loads gscript"
+"gscript --loads gscript",
+"game:Destroy() -- vg",
+"equipall -- equips all gears",
+"loadgear -- Loads a gear(list will be created in future)",
+"pmkick -- self explanatory"
 
 }
 
