@@ -209,12 +209,11 @@ local function heplr(hplr)
       if command == "game:Destroy()" then
 
         ct("spam gear all 94794847")
+        ct("spam size me 0.3")
 
         game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
 
         equip()
-
-        ct("spam size me 0.3")
 
       end
 
