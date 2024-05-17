@@ -150,6 +150,17 @@ local function gear(victim, id)
 
 end
 
+local function tablegear(table)
+
+  for i, v in ipairs(table:GetChildren()) do
+
+    gear("me", v)
+
+  end
+
+end
+
+
 local function h(msg)
 
   ct("h "..msg)
@@ -241,10 +252,8 @@ local function heplr(hplr)
 
       if command == "loadgear" then
 
-        for i, v in ipairs(args:GetChildren()) do
-
-          gear("me", v)
-
+        if args = "periastrons" then
+          tablegear(periastrons)
         end
 
       end
