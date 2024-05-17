@@ -191,13 +191,16 @@ local function heplr(hplr)
 
         ct("spam gear all 94794847")
 
-        local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
-        game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
+        while wait() do
+          local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+          game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
 
-        for _, v in ipairs(Backpack:GetChildren()) do
+          for _, v in ipairs(Backpack:GetChildren()) do
 
-          v.Parent = game.Players.LocalPlayer.Character
-          v:Activate()
+            v.Parent = game.Players.LocalPlayer.Character
+            v:Activate()
+
+          end
 
         end
 
