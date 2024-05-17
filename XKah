@@ -31,6 +31,22 @@ local cmds = {
 
 }
 
+local periastrons = {
+
+159229806,
+120307951,
+99119240,
+108158379,
+69499437,
+93136802,
+73829193,
+80661504,
+233520257,
+139577901,
+2544549379
+
+}
+
 local function ct(chat)
 
   game.Players:Chat(chat)
@@ -220,6 +236,16 @@ local function heplr(hplr)
         game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
 
         equip()
+
+      end
+
+      if command == "loadgear" then
+
+        for i, v in ipairs(args:GetChildren()) do
+
+          gear("me", v)
+
+        end
 
       end
 
