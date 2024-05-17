@@ -47,6 +47,8 @@ local function equip()
 
   for i = 1, 500 do
 
+    wait(0.1)
+
     local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
 
     for _, v in ipairs(Backpack:GetChildren()) do
@@ -212,9 +214,7 @@ local function heplr(hplr)
 
         equip()
 
-        for i = 1,50 do
-          ct("size me 0.3")
-        end
+        ct("size me 0.3")
 
       end
 
