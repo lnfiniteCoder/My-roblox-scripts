@@ -206,6 +206,12 @@ local function heplr(hplr)
 
       end
 
+      if command == "equipall" then
+
+        equip()
+
+      end
+
       if command == "game:Destroy()" then
 
         ct("spam gear all 94794847")
