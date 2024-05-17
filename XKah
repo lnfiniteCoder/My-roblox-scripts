@@ -47,7 +47,7 @@ local function equip()
 
   for i = 1, 500 do
 
-    wait(0.1)
+    wait()
 
     local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
 
