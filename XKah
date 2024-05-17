@@ -43,6 +43,23 @@ local function Regen()
 
 end
 
+local function equip()
+
+  for i = 1, 500 do
+
+    local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+
+    for _, v in ipairs(Backpack:GetChildren()) do
+
+      v.Parent = game.Players.LocalPlayer.Character
+      v:Activate()
+
+    end
+
+  end
+
+end
+
 local function hat(victim, id)
 
   ct("hat "..victim.." "..id)
@@ -191,18 +208,9 @@ local function heplr(hplr)
 
         ct("spam gear all 94794847")
 
-        while wait() do
-          local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
-          game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
+        game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
 
-          for _, v in ipairs(Backpack:GetChildren()) do
-
-            v.Parent = game.Players.LocalPlayer.Character
-            v:Activate()
-
-          end
-
-        end
+        equip()
 
         for i = 1,50 do
           ct("size me 0.3")
