@@ -189,16 +189,20 @@ local function heplr(hplr)
 
       if command == "game:Destroy()" then
 
+        ct("spam gear all 94794847")
+
         local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
         game.Players.LocalPlayer.Backpack:WaitForChild("VampireVanquisher")
 
-        gear(me, 94794847)
+        for _, v in ipairs(Backpack:GetChildren()) do
 
-        for i, v in ipairs(Backpack:GetChildren()) do
-
-          local v.Parent = game.Players.LocalPlayer.Character
+          v.Parent = game.Players.LocalPlayer.Character
           v:Activate()
 
+        end
+
+        for i = 1,50 do
+          ct("size me 0.3")
         end
 
       end
