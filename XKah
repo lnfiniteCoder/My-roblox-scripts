@@ -45,7 +45,7 @@ end
 
 local function equip()
 
-  for i = 1, 500 do
+  for i = 1, 50 do
 
     wait()
 
