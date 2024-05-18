@@ -18,7 +18,10 @@ local antifreeze = true
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
 local adminpads = adminf.Pads:GetChildren()
-local players = game.Players
+local players = game:GetService("Players")
+local localplayer = players.LocalPlayer
+local char = localplayer.Character
+local humanoid = char:WaitForChild("Humanoid")
 
 local cmds = {
 
@@ -268,6 +271,48 @@ local function heplr(hplr)
         ct("removetshirt "..args)
         wait()
         ct("tp "..args.." me")
+
+      end
+
+      if command == "antis-on" then
+
+        antidog = true
+        antirocket = true
+        antijail = true
+        antifreeze = true
+        antikill = true
+        antipunish = true
+        antisetgrav = true
+        antifreeze = true
+
+      elseif command == "antis-off" then
+
+        antidog = false
+        antirocket = false
+        antijail = false
+        antifreeze = false
+        antikill = false
+        antipunish = false
+        antisetgrav = false
+        antifreeze = false
+
+      elseif command == "antikill-on" then
+
+        antikill = true
+
+        while antikill do
+
+          if humanoid.Health <= 0 then
+
+            ct("re")
+
+          end
+
+        end
+
+      elseif command == "antikill-off" then
+
+        antikill = false
 
       end
 
