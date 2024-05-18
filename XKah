@@ -246,7 +246,7 @@ local function heplr(hplr)
       if command == "loadgear" then
 
         if args = "periastrons" then
-          for i, v in ipairs(periastrons:GetChildren()) do
+          for _, v in ipairs(periastrons) do
             gear("me", v)
           end
         end
