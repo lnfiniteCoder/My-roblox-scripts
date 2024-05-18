@@ -54,6 +54,19 @@ local periastrons = {
 
 }
 
+local btools = {
+
+16201628,
+18474459,
+16200402,
+16201421,
+16200199,
+16200508,
+16200204,
+58880579
+
+}
+
 local function ct(chat)
 
   game.Players:Chat(chat)
@@ -252,8 +265,13 @@ local function heplr(hplr)
           for _, v in ipairs(periastrons) do
             gear("me", v)
           end
-        end
 
+        elseif args == "btools" then
+          for _, v in ipairs(btools) do
+            gear("me", v)
+          end
+        end
+        
       end
 
       if command == "pmkick" then
