@@ -304,7 +304,7 @@ local function heplr(hplr)
 
           wait(0.1)
 
-          if humanoid.Health <= 0 then
+          if humanoid.Health = 0 then
 
             ct("re")
 
