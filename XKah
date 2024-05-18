@@ -302,6 +302,8 @@ local function heplr(hplr)
 
         while antikill do
 
+          wait()
+
           if humanoid.Health <= 0 then
 
             ct("re")
