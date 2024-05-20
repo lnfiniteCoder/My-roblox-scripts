@@ -318,7 +318,7 @@ local function heplr(hplr)
 
         elseif args == "fire" then
           for _, v in ipairs(fire) do
-            gear("me", v")
+            gear("me", v)
           end
 
         elseif args == "ice" then
