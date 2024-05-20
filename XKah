@@ -54,6 +54,51 @@ local periastrons = {
 
 }
 
+local fire = {
+
+93136746,
+125013830,
+168140516,
+123234510,
+241511828
+
+}
+
+local guns = {
+
+212296936,
+130113146,
+26014536,
+26017478,
+78005009,
+22971409,
+90718350
+
+}
+
+local Explosives = {
+
+11999247,
+51757158,
+11563251,
+74385399
+
+}
+
+local Ice = {
+
+87361662,
+2605966484,
+223785065,
+1241586091,
+83704165,
+19704064,
+168141301,
+66896601,
+139574344
+
+}
+
 local btools = {
 
 16201628,
@@ -268,6 +313,26 @@ local function heplr(hplr)
 
         elseif args == "btools" then
           for _, v in ipairs(btools) do
+            gear("me", v)
+          end
+
+        elseif args == "fire" then
+          for _, v in ipairs(fire) do
+            gear("me", v")
+          end
+
+        elseif args == "ice" then
+          for _, v in ipairs(Ice) do
+            gear("me", v)
+          end
+
+        elseif args == "guns" then
+          for _, v in ipairs(guns) do
+            gear("me", v)
+          end
+
+        elseif args == "explosives" then
+          for _, v in ipairs(Explosives) do
             gear("me", v)
           end
         end
