@@ -38,6 +38,8 @@ local cmds = {
 
 }
 
+-----------
+
 local periastrons = {
 
 159229806,
@@ -111,6 +113,8 @@ local btools = {
 58880579
 
 }
+
+-----------
 
 local function ct(chat)
 
