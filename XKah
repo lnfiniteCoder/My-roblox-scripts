@@ -306,6 +306,17 @@ local function heplr(hplr)
 
         equip()
 
+      elseif command == "Dogcrash" then
+
+        for i = 1,100 do
+          ct("dog all all all")
+        end
+        wait(0.7)
+        while wait() do
+          ct("tp all me")
+          ct("stand all")
+        end
+
       end
 
       if command == "loadgear" then
@@ -451,7 +462,7 @@ admingrab()
 
 wait(2)
 
-  h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n\nSay xcmds for cmds \n\n(the script is W.I.P)")
+h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n(Recommended to not turn off auto gscript)\nSay xcmds for cmds \n\n(the script is W.I.P)")
 
 print("XKah got loaded.")
 
