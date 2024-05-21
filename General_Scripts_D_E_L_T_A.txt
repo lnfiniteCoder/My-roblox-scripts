@@ -49,13 +49,7 @@ local function heplr(player)
                 end
             elseif msg:lower() == "uns" then
                 ispam = false
-            end
-
-            if msg:sub(1,2) == "r " then
-
-                local runexecuting = msg:sub(2)
-
-            end
+            eend
         end
     end)
 end
