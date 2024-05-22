@@ -275,11 +275,11 @@ local function heplr(hplr)
 
       if command == "fly" and antifly and args ~= "me" and args ~= "others" then
 
-        ct("unfly "..args")
+        ct("unfly "..args)
 
       elseif command == "fly" and antifly and args == "me" then
 
-        ct("unfly others")
+        ct("unfly "..hplr)
 
       elseif command == "fly" and antifly and args == "others" then
 
