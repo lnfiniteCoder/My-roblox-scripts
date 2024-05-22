@@ -306,7 +306,9 @@ local function heplr(hplr)
 
         equip()
 
-      elseif command == "Dogcrash" then
+      enc
+
+      if command == "Dogcrash" then
 
         for i = 1,100 do
           ct("dog all all all")
