@@ -252,21 +252,25 @@ local function heplr(hplr)
     local command = splitter[1]
     local args = splitter[2]
 
-    if anticlone and command == "clone" then
+    if hplr ~= playes.LocalPlayer then
 
-      ct("removeclones")
+      if anticlone and command == "clone" then
 
-    end
+        ct("removeclones")
 
-    if antiname and command == "name" and args ~= "me" and args ~= "others" then
+      end
 
-      wait(0.1)
-      ct("unname "..args)
+      if antiname and command == "name" and args ~= "me" and args ~= "others" then
 
-    elseif command == "name" and args == "others" then
+        wait(0.1)
+        ct("unname "..args)
 
-      wait(0.1)
-      ct("unname all")
+      elseif command == "name" and args == "others" then
+
+        wait(0.1)
+        ct("unname all")
+
+      end
 
     end
 
