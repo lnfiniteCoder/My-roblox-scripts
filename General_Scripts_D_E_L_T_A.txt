@@ -49,7 +49,7 @@ local function heplr(player)
                 end
             elseif msg:lower() == "uns" then
                 ispam = false
-            e1nd
+            end
         end
     end)
 end
