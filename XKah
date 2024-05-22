@@ -16,6 +16,7 @@ local antisetgrav = true
 local antifreeze = true
 local anticlone = true
 local antiname = true
+local antifly = true
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
@@ -272,6 +273,20 @@ local function heplr(hplr)
 
       end
 
+      if command == "fly" and antifly and args ~= "me" and args ~= "others" then
+
+        ct("unfly "..args")
+
+      elseif command == "fly" and antifly and args == "me" then
+
+        ct("unfly "..hplr)
+
+      elseif command == "fly" and antifly and args == "others" then
+
+        ct("unfly all")
+
+      end
+
     end
 
     if hplr == players.LocalPlayer then
@@ -408,6 +423,9 @@ local function heplr(hplr)
         antipunish = true
         antisetgrav = true
         antifreeze = true
+        anticlone = true
+        antiname = true
+        antifly = true
 
       elseif command == "antis-off" then
 
@@ -419,6 +437,9 @@ local function heplr(hplr)
         antipunish = false
         antisetgrav = false
         antifreeze = false
+        anticlone = false
+        antiname = false
+        antifly = false
 
       elseif command == "antikill-on" then
 
