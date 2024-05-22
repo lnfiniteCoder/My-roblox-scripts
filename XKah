@@ -306,7 +306,7 @@ local function heplr(hplr)
 
         equip()
 
-      enc
+      end
 
       if command == "dogcrash" then
 
