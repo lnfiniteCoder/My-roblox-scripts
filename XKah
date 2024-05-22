@@ -253,7 +253,7 @@ local function heplr(hplr)
     local command = splitter[1]
     local args = splitter[2]
 
-    if hplr ~= playes.LocalPlayer then
+    if hplr ~= players.LocalPlayer then
 
       if anticlone and command == "clone" then
 
