@@ -258,9 +258,13 @@ local function heplr(hplr)
 
     end
 
-    if antiname and command == "name" then
+    if antiname and command == "name" and args ~= "me" and args ~= "others" then
 
       ct("unname "..args)
+
+    elseif command == "name" and args == "others" then
+
+      ct("unname all")
 
     end
 
