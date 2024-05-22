@@ -260,10 +260,12 @@ local function heplr(hplr)
 
     if antiname and command == "name" and args ~= "me" and args ~= "others" then
 
+      wait(0.1)
       ct("unname "..args)
 
     elseif command == "name" and args == "others" then
 
+      wait(0.1)
       ct("unname all")
 
     end
