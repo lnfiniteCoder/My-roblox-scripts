@@ -451,11 +451,6 @@ local function heplr(hplr)
 
         antikill = true
 
-        while antikill and game.Players.LocalPlayer.Character.Humanoid.Health == 0 do
-
-          ct("re")
-          wait(0.1)
-
         end
 
       elseif command == "antikill-off" then
