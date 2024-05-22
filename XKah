@@ -287,6 +287,12 @@ local function heplr(hplr)
 
       end
 
+      if command == "jail" and antijail then
+
+        ct("removejails")
+
+      end
+
     end
 
     if hplr == players.LocalPlayer then
@@ -455,6 +461,26 @@ local function heplr(hplr)
       elseif command == "antikill-off" then
 
         antikill = false
+
+      end
+
+      if command == "antifly-on" then
+
+        antifly = true
+
+      elseif command == "antifly-off" then
+
+        antifly = false
+
+      end
+
+      if command == "antijail-on" then
+
+        antijail = true
+
+      elseif command == "antijail-off" then
+
+        antijail = false
 
       end
 
