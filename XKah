@@ -14,6 +14,8 @@ local antikill = true
 local antipunish = true
 local antisetgrav = true
 local antifreeze = true
+local anticlone = true
+local antiname = true
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
@@ -250,6 +252,18 @@ local function heplr(hplr)
     local command = splitter[1]
     local args = splitter[2]
 
+    if anticlone and command == "clone" then
+
+      ct("removeclones")
+
+    end
+
+    if antiname and command == "name" then
+
+      ct("unname "..args)
+
+    end
+
     if hplr == players.LocalPlayer then
 
       if command == "xcmds" then
@@ -410,6 +424,26 @@ local function heplr(hplr)
       elseif command == "antikill-off" then
 
         antikill = false
+
+      end
+
+      if command == "anticlone-on" then
+
+        anticlone = true
+
+      elseif command == "anticlone-off" then
+
+        anticlone = false
+
+      end
+
+      if command == "antiname-on" then
+
+        antiname = true
+
+      elseif command == "antiname-off" then
+
+        antiname = false
 
       end
 
