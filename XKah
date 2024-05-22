@@ -308,7 +308,7 @@ local function heplr(hplr)
 
       enc
 
-      if command == "Dogcrash" then
+      if command == "dogcrash" then
 
         for i = 1,100 do
           ct("dog all all all")
