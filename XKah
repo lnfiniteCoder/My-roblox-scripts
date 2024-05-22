@@ -279,7 +279,7 @@ local function heplr(hplr)
 
       elseif command == "fly" and antifly and args == "me" then
 
-        ct("unfly "..hplr)
+        ct("unfly "..tostring(hplr.Name))
 
       elseif command == "fly" and antifly and args == "others" then
 
