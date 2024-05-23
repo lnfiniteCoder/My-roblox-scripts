@@ -551,7 +551,7 @@ local admingrab = coroutine.wrap(function()
 end)
 admingrab()
 
-local antikill = coroutine.wrap(function()
+local antikillc = coroutine.wrap(function()
 
   while wait() do
 
@@ -568,7 +568,9 @@ local antikill = coroutine.wrap(function()
   end
 
 end)
-wait(2)
+antikillc()
+
+wait(1)
 
 h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n(Recommended to not turn off auto gscript)\nSay xcmds for cmds \n\n(the script is W.I.P)")
 
