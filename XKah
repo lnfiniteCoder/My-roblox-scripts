@@ -252,6 +252,9 @@ local function heplr(hplr)
     local splitter = m:split(" ")
     local command = splitter[1]
     local args = splitter[2]
+    local args2 = splitter[3]
+    local args3 = splitter[4]
+    local args4 = splitter[5]
 
     if hplr ~= players.LocalPlayer then
 
@@ -327,10 +330,10 @@ local function heplr(hplr)
 
       if command == "nuke" then
 
-        for i = 1,200 do
+        for i = 1,args2 do
 
           ct("explode "..args)
-          wait(0.5)
+          wait(args3)
 
         end
 
