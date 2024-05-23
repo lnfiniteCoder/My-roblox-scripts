@@ -551,6 +551,23 @@ local admingrab = coroutine.wrap(function()
 end)
 admingrab()
 
+local antikill = coroutine.wrap(function()
+
+  while wait() do
+
+    if antikill then
+
+      if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+
+        ct("re")
+
+      end
+
+    end
+
+  end
+
+end)
 wait(2)
 
 h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n(Recommended to not turn off auto gscript)\nSay xcmds for cmds \n\n(the script is W.I.P)")
