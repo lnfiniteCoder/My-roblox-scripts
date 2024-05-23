@@ -31,13 +31,15 @@ local cmds = {
 "xcmds --cmds",
 "regen --regens pads",
 "re --reset me",
-"nuke player --explodes specified player",
+"nuke player amount interval --explodes specified player",
 "kitten player --makes the player naked",
 "gscript --loads gscript",
 "game:Destroy() -- vg",
 "equipall -- equips all gears",
 "loadgear -- Loads a gear(list will be created in future)",
-"pmkick -- self explanatory"
+"pmkick -- self explanatory",
+"dogcrash",
+"anits-on,antis-off -- disables and enables anti variables"
 
 }
 
