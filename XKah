@@ -451,8 +451,6 @@ local function heplr(hplr)
 
         antikill = true
 
-        end
-
       elseif command == "antikill-off" then
 
         antikill = false
