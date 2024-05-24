@@ -17,6 +17,7 @@ local antifreeze = true
 local anticlone = true
 local antiname = true
 local antifly = true
+local antipm = true
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
@@ -437,6 +438,7 @@ local function heplr(hplr)
         anticlone = true
         antiname = true
         antifly = true
+        antipm = true
 
       elseif command == "antis-off" then
 
@@ -451,6 +453,7 @@ local function heplr(hplr)
         anticlone = false
         antiname = false
         antifly = false
+        antipm = false
 
       elseif command == "antikill-on" then
 
@@ -459,6 +462,16 @@ local function heplr(hplr)
       elseif command == "antikill-off" then
 
         antikill = false
+
+      end
+
+      if command == "antipm-on" then
+
+        antipm = true
+
+      elseif command == "antipm-off" then
+
+        antipm = true
 
       end
 
@@ -570,6 +583,27 @@ local antikillc = coroutine.wrap(function()
 end)
 antikillc()
 
+local antipmc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antipm then
+
+      for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+
+        if v.Name == "MessageGUI" or v.Name == "Message" or v.Name == "HintGUI" or v.Name == "Ice" then
+
+          v:Destroy()
+
+        end
+
+      end
+
+    end
+
+  end
+
+end)
 wait(1)
 
 h("h \n\n\n\n\n\n\n\n\n\n XKah got loaded! \n\nCreator is Ih0temyIife \n\nprefix is there is no prefix \n(Recommended to not turn off auto gscript)\nSay xcmds for cmds \n\n(the script is W.I.P)")
