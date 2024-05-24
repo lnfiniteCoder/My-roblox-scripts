@@ -272,7 +272,7 @@ local function heplr(hplr)
         wait(0.1)
         ct("unname "..args)
 
-      elseif command == "name" and args == "others" then
+      elseif command == "name" and args == "others" and antiname then
 
         wait(0.1)
         ct("unname all")
