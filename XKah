@@ -267,6 +267,16 @@ local function heplr(hplr)
 
       end
 
+      if antisetgrav and command == "setgrav" and args ~= "me" or args ~= "others" then
+
+        ct("setgrav "..args.." 0")
+
+      elseif antisetgrav and command == "setgrav" and args == "others" then
+
+        ct("setgrav all 0")
+
+      end
+
       if antiname and command == "name" and args ~= "me" and args ~= "others" then
 
         wait(0.1)
@@ -462,6 +472,16 @@ local function heplr(hplr)
       elseif command == "antikill-off" then
 
         antikill = false
+
+      end
+
+      if command == "antisetgrav-on" then
+
+        antisetgrav = true
+
+      elseif command == "antisetgrav-off" then
+
+        antisetgrav = false
 
       end
 
