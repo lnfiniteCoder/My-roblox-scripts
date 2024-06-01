@@ -4,7 +4,7 @@ wait(1)
 
 local owner = "Ih0temyIife"
 
-local autogsc = true
+local autogsc = false
 
 local antidog = true
 local antirocket = true
