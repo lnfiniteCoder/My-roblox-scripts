@@ -42,13 +42,13 @@ local function heplr(player)
 
             if msg:lower() == "sk2" then
 
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/General_Scripts_D_E_L_T_A.txt"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/SimpleKahV2.lua.txt"))()
 
             end
 
             if msg:lower() == "xkah" then
 
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/General_Scripts_D_E_L_T_A.txt"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/XKah"))()
 
             end
 
