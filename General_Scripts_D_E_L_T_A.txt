@@ -4,6 +4,25 @@ local function ct(message)
 
 end
 
+local function equipall()
+
+  for i = 1, 50 do
+
+    wait()
+
+    local Backpack = game.Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+
+    for _, v in ipairs(Backpack:GetChildren()) do
+
+      v.Parent = game.Players.LocalPlayer.Character
+      v:Activate()
+
+    end
+
+  end
+
+end
+
 local supamount = 200
 
 local function heplr(player)
