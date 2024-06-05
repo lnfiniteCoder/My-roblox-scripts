@@ -45,4 +45,4 @@ game.Players.PlayerAdded:Connect(function(plr)
 
   heplrs(plr)
 
-end
+end)
