@@ -1,0 +1,19 @@
+local function heplrs(heplr)
+
+  heplr.Chatted:Connect(function(m)
+
+    if heplr == game.Players.LocalPlayer then
+
+
+
+    end
+
+  end)
+
+end
+
+for _, player in pairs(game.Players:GetChildren()) do
+
+  heplrs(player)
+
+end
