@@ -1,10 +1,33 @@
+local kp = {583030187, 68539623}
+
+local function ct(m)
+
+  game.Players:Chat(m)
+
+end
+
 local function heplrs(heplr)
 
   heplr.Chatted:Connect(function(m)
 
+    local splitter = m:split()
+    local command = splitter[1]
+    local args = splitter[2]
+    local args2 = splitter[3]
+
     if heplr == game.Players.LocalPlayer then
 
+      if command == "gear" then
 
+        if args2 == "kp" then
+
+          for i, v in ipairs(kp) do
+            ct(":gear "..args.." "..v)
+          end
+
+        end
+
+      end
 
     end
 
@@ -12,8 +35,14 @@ local function heplrs(heplr)
 
 end
 
-for _, player in pairs(game.Players:GetChildren()) do
+for _, player in pairs(game.Players:GetPlayers()) do
 
   heplrs(player)
+
+end
+
+game.Players.PlayerAdded:Connect(function(plr)
+
+  heplrs(plr)
 
 end
