@@ -552,7 +552,7 @@ end
 
 players.PlayerAdded:Connect(function(player)
 
-  local s, r = heplr(player)
+  local s, r = pcall(heplr(player))
 
   if not s then
 
