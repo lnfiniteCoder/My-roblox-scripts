@@ -104,4 +104,11 @@ game.Players.PlayerAdded:Connect(function(player)
     heplr(player)
 end)
 -- Auto execute
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+local s, r = pcall(loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))())
+
+if s then
+
+    print("Iy loaded")
+
+end
