@@ -105,10 +105,4 @@ game.Players.PlayerAdded:Connect(function(player)
 end)
 -- Auto execute
 
-local s, r = pcall(loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))())
-
-if s then
-
-    print("Iy loaded "..r)
-
-end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
