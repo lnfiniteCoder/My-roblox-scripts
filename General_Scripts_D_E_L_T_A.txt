@@ -109,6 +109,6 @@ local s, r = pcall(loadstring(game:HttpGet('https://raw.githubusercontent.com/Ed
 
 if s then
 
-    print("Iy loaded")
+    print("Iy loaded "..r)
 
 end
