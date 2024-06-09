@@ -540,33 +540,14 @@ end
 
 for _, player in pairs(game.Players:GetPlayers()) do
 
-  local s, r = pcall(heplr(player))
-
-  if not s then
-
-    print("Error detected by XKah: "..r)
-
-  end
+  heplr(player)
 
 end
 
 players.PlayerAdded:Connect(function(player)
 
-  local s, r = pcall(heplr(player))
-
-  if not s then
-
-    print("Error detected by XKah: "..r)
-
-  end
-
-  s, r = pcall(welcomemessage(player))
-
-  if not s then
-
-    print("Error detected by XKah: "..r)
-
-  end
+  heplr(player)
+  welcomemessage(player)
 
 end)
 
