@@ -344,7 +344,8 @@ local function heplr(hplr)
       if command == "fakemsg" then
 
         for i = 1,10 do
-          ct("h \n\n\n"..args..":"..args2.."\n\n\n")
+
+          ct("h \n\n\n"..args..": "..m:sub(1, string.len(command) + string.len(args) + 2).."\n\n\n")
         end
 
       end
@@ -539,14 +540,33 @@ end
 
 for _, player in pairs(game.Players:GetPlayers()) do
 
-  heplr(player)
+  local s, r = pcall(heplr(player))
+
+  if not s then
+
+    print("Error detected by XKah: "..r)
+
+  end
 
 end
 
 players.PlayerAdded:Connect(function(player)
 
-  heplr(player)
-  welcomemessage(player)
+  local s, r = heplr(player)
+
+  if not s then
+
+    print("Error detected by XKah: "..r)
+
+  end
+
+  s, r = pcall(welcomemessage(player))
+
+  if not s then
+
+    print("Error detected by XKah: "..r)
+
+  end
 
 end)
 
