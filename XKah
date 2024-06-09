@@ -345,7 +345,7 @@ local function heplr(hplr)
 
         for i = 1,10 do
 
-          ct("h \n\n\n"..args..": "..m:sub(1, string.len(command) + string.len(args) + 2).."\n\n\n")
+          ct("h \n\n\n"..args..": "..m:sub(string.len(command) + string.len(args) + 2).."\n\n\n")
         end
 
       end
