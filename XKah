@@ -268,7 +268,7 @@ local function heplr(hplr)
 
       end
 
-      if antisetgrav and command == "setgrav" and args ~= "me" or args ~= "others" then
+      if antisetgrav and command == "setgrav" and args ~= "me" and args ~= "others" then
 
         ct("setgrav "..args.." 0")
 
