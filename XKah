@@ -337,8 +337,8 @@ local function heplr(hplr)
         while not game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen") then
 
           wait()
-          local lppos = hrpart.CFrame
-          lppos = lppos * CFrame.new(0, 100, 0)
+          local lppos = char:GetPivot()
+          lppos:PivotTo(char * CFrame.new(0, 255, 0)
 
         end
 
