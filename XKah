@@ -338,7 +338,7 @@ local function heplr(hplr)
 
           wait()
           local lppos = char:GetPivot()
-          lppos:PivotTo(char * CFrame.new(0, 255, 0))
+          lppos:PivotTo(lppos * CFrame.new(0, 255, 0))
 
         end
 
