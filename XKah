@@ -598,6 +598,12 @@ admingrab()
 
 local antikillc = coroutine.wrap(function()
 
+  while not rp do
+
+    wait()
+
+  end
+
   while wait() do
 
     if antikill then
