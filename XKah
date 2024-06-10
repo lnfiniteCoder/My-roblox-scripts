@@ -25,6 +25,7 @@ local players = game:GetService("Players")
 local localplayer = players.LocalPlayer
 local char = localplayer.Character
 local humanoid = char:WaitForChild("Humanoid")
+local hrpart = char:FindFirstChild("HumanoidRootPart")
 
 local cmds = {
 
@@ -326,6 +327,20 @@ local function heplr(hplr)
       if command == "regen" then
 
         Regen()
+
+      elseif command == "loadregen" then
+
+        rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
+
+      elseif command == "findregen" then
+
+        while not game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen") then
+
+          wait()
+          local lppos = hrpart.CFrame
+          lppos = lppos * CFrame.new(0, 100, 0)
+
+        end
 
       end
 
