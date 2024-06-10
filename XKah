@@ -334,7 +334,7 @@ local function heplr(hplr)
 
       elseif command == "findregen" then
 
-        while not game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen") then
+        while not game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen") do
 
           wait()
           local lppos = char:GetPivot()
