@@ -26,7 +26,7 @@ end
 
 local function plrcheck(plr)
   for i, v in pairs(game.Players:GetPlayers()) do
-    if plr:lower() == string.sub(v.Name, 1, #plr:lower()) then
+    if plr == string.sub(v.Name, 1, #plr) then
       print("plr: "..v.Name)
       gplr = v.Name
     end
