@@ -35,7 +35,7 @@ end
 
 local function tct(a)
 
-  for _, v in ipairs(a:GetChildren()) do
+  for _, v in ipairs(a) do
     ct(v)
   end
 end
