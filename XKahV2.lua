@@ -220,24 +220,6 @@ local antikillc = coroutine.wrap(function()
 end)
 antikillc()
 
-local blc = corountine.wrap(function()
-  while wait() do
-    for i, v in pairs(game.Players:GetPlayers()) do
-      for bli, blv in pairs(blacklist) do
-        if v.Name == blv then
-          if v:FindFirstChild("Character") then
-            ct("setgrav "..blv.." -9e9")
-            wait(0.2)
-            ct("punish "..blv)
-            ct("blind "..blv)
-          end
-        end
-      end  
-    end
-  end
-end)
-blc()
-
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
