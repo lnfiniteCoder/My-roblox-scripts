@@ -18,6 +18,8 @@ local rtx = {
   sunrise = {"outdoorambient 0.7 0.7 0.7", "ambient 100 0 100", "fogend 3000", "time 6.9", "colorshifttop 100 50 0", "colorshiftbottom 0 0 0"}
 }
 
+local blacklist = {}
+
 local function ct(a)
 
   game.Players:Chat(a)
@@ -92,6 +94,15 @@ local function a(plr)
         end
       end
 
+      if cmd == "bl" then
+        table.insert(blacklist, args1)
+      elseif cmd == "unbl" then
+        for i, v in pairs(blacklist) do
+          if v == args1 then
+            table.remove(blacklist, i)
+          end
+        end
+      end
       if cmd == "laser" then
 
       ct("ungear me")
