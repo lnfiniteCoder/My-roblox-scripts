@@ -92,6 +92,15 @@ local function a(plr)
             v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
           end
         end
+      elseif cmd == "rails" then
+        ct("equipall")
+        for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+          wait(args3)
+          plrcheck(args1)
+          if v.Name == "Railgun" then
+            v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
+          end
+        end
       end
 
       if cmd == "bl" then
