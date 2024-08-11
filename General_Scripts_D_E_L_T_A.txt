@@ -72,11 +72,9 @@ local function heplr(player)
 
             if cmd == "sup" then
 
-                local supcmd = msg:sub(4)
-
                 for i = 1,supamount do
 
-                    ct(supcmd)
+                    ct(string.sub(msg, 4)
 
                 end
 
