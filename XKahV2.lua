@@ -93,20 +93,6 @@ local function a(plr)
           end
         end
       end
-      if cmd == "shoot" then
-        ct("equipall")
-        for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-          wait(args3)
-          plrcheck(args1)
-          if v:IsA("Tool") then
-            for i, r in pairs(v:GetChildren()) do
-              if r:IsA("RemoteEvent") then
-                r:FireServer(game.Players[gplr].Character:GetPivot().Position)
-              end
-            end
-          end
-        end
-      end
 
       if cmd == "bl" then
         plrcheck(args1)
