@@ -28,40 +28,42 @@ local supamount = 200
 local function heplr(player)
     local ispam = false
     player.Chatted:Connect(function(msg)
+
+        local spl = string.sub(msg, " ")
+        local cmd = spl[1]
+        local args1 = spl[2]
+        local args2 = spl[3]
+        local args3 = spl[4]
         if player == game.Players.LocalPlayer then
-            if msg:sub(1,4) == "iyc " then
-                local iycmd = msg:sub(5)
-                execCmd(iycmd)
+            if cmd == "iyc" then
+                execCmd(args1)
             end
 
-            if msg:sub(1,6) == "print " then
-
-                local cprint = msg:sub(7)
-                print(cprint)
-
+            if cmd == "print" then
+                print(string.sub(msg, #cmd))
             end
 
-            if msg:sub(1,8) == "samount " then
+            if cmd == "samount" then
 
-                supamount = msg:sub(9)
+                supamount = args1
 
             end
 
-            if msg:lower() == "tjx" then
+            if cmd == "tjx" then
 
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/Tjxploit"))()
 
             end
 
-            if msg:lower() == "equipall" then
+            if cmd == "equipall" then
 
                 equipall()
 
             end
 
-            if msg:sub(1,4) == "sup " then
+            if cmd == "sup" then
 
-                local supcmd = msg:sub(5)
+                local supcmd = msg:sub(#cmd)
 
                 for i = 1,supamount do
 
@@ -71,20 +73,20 @@ local function heplr(player)
 
             end
 
-            if msg:lower() == "sk2" then
+            if cmd == "sk2" then
 
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/SimpleKahV2.lua.txt"))()
 
             end
 
-            if msg:lower() == "xkah" then
+            if cmd == "xkah" then
 
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/XKah"))()
 
             end
 
-            if msg:sub(1,5) == "spam " then
-                local scmd = msg:sub(6)
+            if cmd == "spam" then
+                local scmd = msg:sub(#cmd)
                 ispam = true
                 while ispam do
                     wait(0.1)
