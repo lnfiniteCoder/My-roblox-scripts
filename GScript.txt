@@ -39,7 +39,7 @@ local function heplr(player)
     player.Chatted:Connect(function(msg)
 
         local spl = string.split(msg, " ")
-        local cmd = spl[1]
+        local cmd = spl[1]:lower()
         local args1 = spl[2]
         local args2 = spl[3]
         local args3 = spl[4]
@@ -74,7 +74,7 @@ local function heplr(player)
 
                 for i = 1,supamount do
 
-                    ct(string.sub(msg, 4)
+                    ct(msg:sub(5))
 
                 end
 
@@ -93,7 +93,7 @@ local function heplr(player)
             end
 
             if cmd == "spam" then
-                local scmd = msg:sub(5)
+                local scmd = msg:sub(6)
                 ispam = true
                 while ispam do
                     wait(0.1)
