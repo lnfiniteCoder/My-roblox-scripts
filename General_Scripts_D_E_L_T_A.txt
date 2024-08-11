@@ -38,7 +38,7 @@ local function heplr(player)
     local ispam = false
     player.Chatted:Connect(function(msg)
 
-        local spl = string.sub(msg, " ")
+        local spl = string.split(msg, " ")
         local cmd = spl[1]
         local args1 = spl[2]
         local args2 = spl[3]
