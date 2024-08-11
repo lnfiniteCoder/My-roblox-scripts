@@ -36,7 +36,7 @@ local function heplr(player)
         local args3 = spl[4]
         if player == game.Players.LocalPlayer then
             if cmd == "iyc" then
-                execCmd(args1)
+                execCmd(string.sub(msg, 4))
             end
 
             if cmd == "print" then
@@ -63,7 +63,7 @@ local function heplr(player)
 
             if cmd == "sup" then
 
-                local supcmd = msg:sub(#cmd)
+                local supcmd = msg:sub(4)
 
                 for i = 1,supamount do
 
@@ -86,7 +86,7 @@ local function heplr(player)
             end
 
             if cmd == "spam" then
-                local scmd = msg:sub(#cmd)
+                local scmd = msg:sub(5)
                 ispam = true
                 while ispam do
                     wait(0.1)
