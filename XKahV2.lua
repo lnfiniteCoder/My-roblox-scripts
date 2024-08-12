@@ -106,11 +106,11 @@ local function a(plr)
         local sb = Instance.new("TextButton")
         sb.Parent = sg
         sb.Size = UDim2.new(0,50,0,50)
-        sb.Position = Udim2.new(40, 0, 40, 0)
+        sb.Position = Udim2.new(-40, 0, -20, 0)
         sb.Text = "C"
         sb.Activated:Connect(function()
 
-          ct("shoot"..gplr)
+          ct("shoot "..gplr)
 
         end)
 
