@@ -105,8 +105,8 @@ local function a(plr)
         sg.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
         local sb = Instance.new("TextButton")
         sb.Parent = sg
-        sb.Size = UDim2.new(0,-200,0,200)
-        sb.Position = UDim2.new(1, 50, 10, 0)
+        sb.Size = UDim2.new(0, 50, 0, 50)
+        sb.Position = UDim2.new(1, -200, 0, 200)
         sb.Text = "C"
         sb.Activated:Connect(function()
 
