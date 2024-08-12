@@ -106,12 +106,21 @@ local function a(plr)
         local sb = Instance.new("TextButton")
         sb.Parent = sg
         sb.Size = UDim2.new(0,50,0,50)
-        sb.Position = Udim2.new(-40, 0, -20, 0)
+        sb.Position = Udim2.new(0, 40, 0, -20)
         sb.Text = "C"
         sb.Activated:Connect(function()
 
-          ct("shoot "..gplr)
+          ct("equipall")
+          for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 
+            if v:IsA("Tool") then
+              for e, r in pairs(v:GetChildren()) do
+                if r:IsA("RemoteEvent") then
+                  r:FireServer(game.Players[gplr].Character:GetPivot().Position)
+                end
+              end
+            end
+          end
         end)
 
       end
