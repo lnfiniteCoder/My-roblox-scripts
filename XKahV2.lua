@@ -110,7 +110,7 @@ local function a(plr)
         sb.Text = "C"
         sb.Activated:Connect(function()
 
-          ct("shoot")
+          ct("shoot"..gplr)
 
         end)
 
