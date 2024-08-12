@@ -29,7 +29,6 @@ end
 local function plrcheck(plr)
   for i, v in pairs(game.Players:GetPlayers()) do
     if plr == string.sub(v.Name:lower(), 1, #plr) or plr == string.sub(v.DisplayName:lower(), 1, #plr) then
-      print("plr: "..v.Name)
       gplr = v.Name
     end
   end
@@ -94,6 +93,27 @@ local function a(plr)
         end
       end
 
+      if cmd == "setgplr" then
+
+        plrcheck(args1)
+
+      end
+
+      if cmd == "shootbutton" then
+
+        local sg = Instance.new("ScreenGui")
+        sg.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+        local sb = Instance.new("TextButton")
+        sb.Parent = sg
+        sb.Size = UDim2.new(50, 0, 50, 0)
+        sb.Position = Udim2.new(40, 0, 40, 0)
+        sb.Text = "Click!"
+        sb.Activated:Connect(function()
+
+          ct("shoot")
+
+        end)
+        
       if cmd == "bl" then
         plrcheck(args1)
         table.insert(blacklist, gplr)
