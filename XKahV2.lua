@@ -113,6 +113,8 @@ local function a(plr)
           ct("shoot")
 
         end)
+
+      end
         
       if cmd == "bl" then
         plrcheck(args1)
