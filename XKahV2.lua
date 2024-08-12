@@ -107,7 +107,7 @@ local function a(plr)
         sb.Parent = sg
         sb.Size = UDim2.new(50, 0, 50, 0)
         sb.Position = Udim2.new(40, 0, 40, 0)
-        sb.Text = "Click!"
+        sb.Text = "C"
         sb.Activated:Connect(function()
 
           ct("shoot")
