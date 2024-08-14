@@ -156,7 +156,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
       if cmd == "fakemsg" then
 
         plrcheck(args1)
-        h("\n\n\n"..gplr..": "..tostring(string.sub(m, #cmd + #args2)).."\n\n\n")
+        h("\n\n\n"..gplr..": "..tostring(string.sub(m, #cmd + #gppr)).."\n\n\n")
 
       end
 
