@@ -155,10 +155,8 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
       if cmd == "fakemsg" then
 
-        local splitvar = string.split(m, "~")
-        local splithelp = splitvar[2]
-
-        h("\n\n\n"..args1..": "..tostring(splithelp).."\n\n\n")
+        plrcheck(args1)
+        h("\n\n\n"..gplr..": "..tostring(string.sub(m, #cmd + #args2)).."\n\n\n")
 
       end
 
