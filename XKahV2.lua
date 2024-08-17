@@ -3,6 +3,7 @@
 wait(1)
 
 local antikill = true
+local antihat = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -156,7 +157,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
       if cmd == "fakemsg" then
 
         plrcheck(args1)
-        local fm = string.sub(m, string.len(gplr) + string.len(cmd))
+        local fm = string.sub(m, string.len(args1) + string.len(cmd) + 2)
         h("\n\n\n"..gplr..": "..fm.."\n\n\n")
 
       end
@@ -175,6 +176,20 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
       end
 
+      if cmd == "antihat" then
+
+        if args1 == "on" then
+          
+          antihat = true
+
+        elseif args1 == "off" then
+
+          antihat = false
+
+        end
+
+      end    
+        
       if cmd == "rtx" then
 
         if args == "sunrise" or "1" then
@@ -249,6 +264,28 @@ local antikillc = coroutine.wrap(function()
 
 end)
 antikillc()
+
+local antihatc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antihat then
+
+      for i, v in pairs(char:GetChildren()) do
+
+        if v:IsA("Accessory") then
+
+          v:Destroy()
+
+        end
+          
+      end
+        
+    end   
+      
+  end
+    
+end)
 
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
