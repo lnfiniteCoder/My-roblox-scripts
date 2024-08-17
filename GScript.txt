@@ -1,3 +1,6 @@
+local sg = Instance.new("ScreenGui")
+sg.Parent = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+
 local function ct(message)
 
     game.Players:Chat(message)
