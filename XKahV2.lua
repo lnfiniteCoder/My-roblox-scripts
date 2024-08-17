@@ -108,6 +108,13 @@ local function a(plr)
           
       end
 
+      if cmd == "boombox" then
+
+        ct("samount "..args2)
+        ct("sup gear "..args1.." 212641536")
+
+      end
+        
       if cmd == "shootbutton" then
 
         local sg = Instance.new("ScreenGui")
