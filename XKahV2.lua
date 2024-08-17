@@ -286,6 +286,7 @@ local antihatc = coroutine.wrap(function()
   end
     
 end)
+antihatc()
 
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
