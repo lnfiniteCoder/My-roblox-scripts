@@ -271,14 +271,24 @@ local antihatc = coroutine.wrap(function()
 
     if antihat then
 
-      for i, v in pairs(char:GetChildren()) do
+      for pli, plv in pairs(game.Players:GetPlayers()) do
+        
+        for i, v in pairs(plv:GetChildren()) do
 
-        if v:IsA("Accessory") then
+          if v:IsA("Accessory") then
 
-          v:Destroy()
+            v:Destroy()
+
+          end
 
         end
           
+      end
+
+      for i, v in pairs(folder:GetChildren()) do
+
+        v:Destroy()
+
       end
         
     end   
