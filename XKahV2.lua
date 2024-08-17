@@ -273,7 +273,7 @@ local antihatc = coroutine.wrap(function()
 
       for pli, plv in pairs(game.Players:GetPlayers()) do
         
-        for i, v in pairs(plv:GetChildren()) do
+        for i, v in pairs(plv.Character:GetChildren()) do
 
           if v:IsA("Accessory") then
 
