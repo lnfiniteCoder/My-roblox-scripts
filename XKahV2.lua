@@ -203,7 +203,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         if args1 == "on" then
           anticlone = true
         elseif args1 == "off" then
-          anticlone == false
+          anticlone = false
         end
 
       end
