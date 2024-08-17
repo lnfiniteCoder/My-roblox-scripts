@@ -4,6 +4,7 @@ wait(1)
 
 local antikill = true
 local antihat = true
+local anticlone = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -100,6 +101,13 @@ local function a(plr)
 
       end
 
+      if cmd == "rlua" then
+
+        -- Ty Python
+        loadstring(m:sub(6))()
+          
+      end
+
       if cmd == "shootbutton" then
 
         local sg = Instance.new("ScreenGui")
@@ -188,7 +196,17 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
         end
 
-      end    
+      end
+
+      if cmd == "anticlone" then
+
+        if args1 == "on" then
+          anticlone = true
+        elseif args1 == "off" then
+          anticlone == false
+        end
+
+      end
         
       if cmd == "rtx" then
 
@@ -284,12 +302,6 @@ local antihatc = coroutine.wrap(function()
         end
           
       end
-
-      for i, v in pairs(folder:GetChildren()) do
-
-        v:Destroy()
-
-      end
         
     end   
       
@@ -297,6 +309,34 @@ local antihatc = coroutine.wrap(function()
     
 end)
 antihatc()
+
+local anticlonec = coroutine.wrap(function()
+
+  while wait() do
+
+    if anticlone then
+  
+      for i, v in pairs(game.Players:GetPlayers()) do
+
+        for e, r in pairs(folder:GetChildren()) do
+
+          if v.Name == r.Name then
+
+            r:Destroy()
+            ct("removeclones")
+
+          end
+            
+        end
+
+      end
+
+    end
+      
+  end
+    
+end)
+anticlonec()
 
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
