@@ -6,6 +6,8 @@ local antikill = true
 local antihat = true
 local anticlone = true
 local anticlientclone = true
+local gearban = false
+local antivg = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -176,6 +178,22 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         local fm = string.sub(m, string.len(tostring(args1)) + string.len(cmd))
         h("\n\n\n"..gplr..": "..fm.."\n\n\n")
 
+      end
+
+      if cmd == "gearban" then
+        if args1 == "on" then
+          gearban = true
+        elseif args1 == "off" then
+          gearban = false
+        end
+      end
+
+      if cmd == "antivg" then
+        if args1 == "on" then
+          antivg = true
+        elseif args1 == "off" then
+          antivg = false
+        end
       end
 
       if cmd == "antikill" then
@@ -382,6 +400,68 @@ local anticclonec = coroutine.wrap(function()
       
 end)
 anticclonec()
+
+local antivgc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antivg then
+
+      for i, v in pairs(game.Players:GetPlayers()) do
+
+        for e,r in pairs(v:GetDescendants()) do
+
+          if r.Name == "VampireVanquisher" then
+
+            if v ~= lp then
+
+              ct("reset "..v.Name)
+              ct("punish "..v.Name)
+              ct("blind "..v.Name)
+                
+            end
+
+          end
+
+        end
+          
+      end
+ 
+    end
+      
+  end
+    
+end)
+antivgc()
+
+local gearbanc = coroutine.wrap(function()
+
+  while wait() do
+      
+    for i, v in pairs(game.Players:GetPlayers()) do
+
+      if v ~= lp then
+        
+        for e, r in pairs(v.Backpack:GetChildren()) do
+
+          if r:IsA("Tool") and r ~= nil then
+
+            ct("reset "..v.Name)
+            ct("fly "..v.Name)
+              
+          end
+            
+        end
+
+      end
+        
+    end
+      
+  end
+    
+end)
+gearbanc()
+
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
