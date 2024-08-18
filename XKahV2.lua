@@ -93,7 +93,7 @@ local function a(plr)
 
       if cmd == "cmds" then
 
-        for i, v in pairs(cmds) then
+        for i, v in pairs(cmds) do
           print(i.. ". "..v)
         end
       end
