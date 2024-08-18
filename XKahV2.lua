@@ -437,28 +437,31 @@ antivgc()
 local gearbanc = coroutine.wrap(function()
 
   while wait() do
-      
-    for i, v in pairs(game.Players:GetPlayers()) do
 
-      if v ~= lp then
+    if gearban then
+      for i, v in pairs(game.Players:GetPlayers()) do
+
+        if v ~= lp then
         
-        for e, r in pairs(v.Backpack:GetChildren()) do
+          for e, r in pairs(v.Backpack:GetChildren()) do
 
-          if r:IsA("Tool") and r ~= nil then
+            if r:IsA("Tool") and r ~= nil then
 
-            ct("reset "..v.Name)
-            ct("fly "..v.Name)
+              ct("reset "..v.Name)
+              ct("fly "..v.Name)
               
-          end
+            end
             
-        end
+          end
 
-      end
+        end
         
-    end
+      end
       
+    end
+
   end
-    
+      
 end)
 gearbanc()
 
