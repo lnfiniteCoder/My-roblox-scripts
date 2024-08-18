@@ -5,6 +5,7 @@ wait(1)
 local antikill = true
 local antihat = true
 local anticlone = true
+local anticlientclone = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -214,6 +215,16 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         end
 
       end
+
+      if cmd == "anticclone" then
+
+        if args1 == "on" then
+          anticlientclone = true
+        elseif args1 == "off" then
+          anticlientclone = false
+        end
+
+      end
         
       if cmd == "rtx" then
 
@@ -295,21 +306,23 @@ local antihatc = coroutine.wrap(function()
   while wait() do
 
     if antihat then
-
-      for pli, plv in pairs(game.Players:GetPlayers()) do
+      pcall(function()
+        for pli, plv in pairs(game.Players:GetPlayers()) do
         
-        for i, v in pairs(plv.Character:GetChildren()) do
+          for i, v in pairs(plv.Character:GetChildren()) do
 
-          if v:IsA("Accessory") then
+            if v:IsA("Accessory") and v ~= nil then
 
-            v:Destroy()
+              v:Destroy()
+
+            end
 
           end
-
-        end
           
-      end
-        
+        end
+
+      end)
+            
     end   
       
   end
@@ -329,7 +342,6 @@ local anticlonec = coroutine.wrap(function()
 
           if v.Name == r.Name then
 
-            r:Destroy()
             ct("removeclones")
 
           end
@@ -344,7 +356,32 @@ local anticlonec = coroutine.wrap(function()
     
 end)
 anticlonec()
+local anticclonec = coroutine.wrap(function()
 
+  while wait() do
+
+    if anticlientclone then
+
+      for i, v in pairs(game.Players:GetPlayers()) do
+
+        for e, r in pairs(folder:GetChildren()) do
+
+          if r.Name == v.Name then
+
+            r:Destroy()
+
+          end
+
+        end
+            
+      end
+          
+    end
+        
+  end
+      
+end)
+anticclonec()
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
