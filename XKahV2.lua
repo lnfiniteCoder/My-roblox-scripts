@@ -119,7 +119,7 @@ local function a(plr)
         anticlone = false
         ct("samount 100")
         ct("respawn me "..gplr)
-        char:PivotTo(CFrame.new(50, 0, 0) * char)
+        char:PivotTo(CFrame.new(50, 0, 0) * char:GetPivot())
         ct("tp "..gplr.." me")
         ct("sup hat "..gplr.." 18137588505")
         ct("sup pm "..gplr.." 😊😚😍😙🤩😙😘😙🤩😙😍😙😍😙🤩😙😍😙🤩😚😍😚🤩😙🤩😚😍😚🤗😚🤩😘😅😚🤩😚😂😚😂😚😍😚😙😅😚😅😚😅😙😅😙😅😙😅")
@@ -134,6 +134,7 @@ local function a(plr)
         end
         ct("uns")
         ct("respawn me")
+        ct("removeclones")
       end
         
       if cmd == "boombox" then
