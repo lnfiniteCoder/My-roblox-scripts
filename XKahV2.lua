@@ -28,6 +28,22 @@ local rtx = {
 
 local blacklist = {}
 
+local cmds = {
+
+"re",
+"regen",
+"shootbutton",
+"rail plr amnt delay(opt)",
+"laser plr amt delay(opt)",
+"setgplr -- Sets a target",
+"rlua -- runs lua code in chat",
+"hang plr--hatkick",
+"Who crashed -- vg",
+"Who crashed? -- Orinthian vg",
+"Im not showing you antis lol the only thing i tell you is that you turn them on and off by saying on and off after the command",
+"fakemsg plr text --unfinished"
+}
+
 local function ct(a)
 
   game.Players:Chat(a)
@@ -75,6 +91,13 @@ local function a(plr)
 
     if plr == game.Players.LocalPlayer then
 
+      if cmd == "cmds" then
+
+        for i, v in pairs(cmds) then
+          print(i.. ". "..v)
+        end
+      end
+        
       if cmd == "re" then
 
         ct("reset me")
@@ -123,6 +146,7 @@ local function a(plr)
         Regen()
         ct("samount 100")
         ct("respawn me "..gplr)
+        wait(0.3)
         char:PivotTo(CFrame.new(470, 10, -469))
         wait(0.3)
         ct("tp "..gplr.." me")
