@@ -453,20 +453,18 @@ local gearbanc = coroutine.wrap(function()
 
         if v ~= lp then
 
-            if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
+          if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
 
-              ct("reset "..v.Name)
+            ct("reset "..v.Name)
               
-            end
-            
           end
-
+            
         end
-        
-      end
-      
-    end
 
+      end
+        
+    end
+      
   end
       
 end)
