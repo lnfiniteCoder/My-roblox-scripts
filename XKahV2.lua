@@ -180,11 +180,11 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
           
         if args1 == "crashed?" then
           ct("spam gear all 92628079")
-          ct("spam dize all 0.3")
+          ct("spam unsize all")
           ct("spam equipall")
         elseif args1 == "crashed" then
           ct("spam gear all 94794847")
-          ct("spam size all 0.3")
+          ct("spam unsize all")
           ct("spam equipall")
         end
       end
