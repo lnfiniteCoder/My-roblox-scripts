@@ -475,7 +475,7 @@ local antipunishc = coroutine.wrap(function()
 
     if antipunish then
 
-      if game:GetService("Lightning"):FindFirstChild(lp.Name) then
+      if game.Lightning:FindFirstChild(lp.Name) then
 
         ct("unpunish me")
 
