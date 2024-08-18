@@ -13,6 +13,7 @@ local antipunish = true
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 local getplrs = game.Players:GetPlayers()
+local lighting = game:GetService("Lighting")
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
@@ -475,7 +476,7 @@ local antipunishc = coroutine.wrap(function()
 
     if antipunish then
 
-      if game.Lightning:FindFirstChild(lp.Name) then
+      if lighting:FindFirstChild(lp.Name) then
 
         ct("unpunish me")
 
