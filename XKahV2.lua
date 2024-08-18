@@ -174,6 +174,21 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         end
       end
 
+      if cmd == "Who" then
+
+        antivg = false
+          
+        if args1 == "crashed?" then
+          ct("spam gear all 92628079")
+          ct("spam dize all 0.3")
+          ct("spam equipall")
+        elseif args1 == "crashed" then
+          ct("spam gear all 94794847")
+          ct("spam size all 0.3")
+          ct("spam equipall")
+        end
+      end
+
 
       if cmd == "fakemsg" then
 
@@ -422,7 +437,7 @@ local antivgc = coroutine.wrap(function()
 
         for e,r in pairs(v:GetDescendants()) do
 
-          if r.Name == "VampireVanquisher" then
+          if r.Name == "VampireVanquisher" or r.Name == "OrinthianSwordAndShield" then
 
             if v ~= lp then
 
