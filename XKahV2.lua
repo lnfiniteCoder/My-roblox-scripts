@@ -114,6 +114,28 @@ local function a(plr)
           
       end
 
+      if cmd == "hang" then
+        plrcheck(args1)
+        anticlone = false
+        ct("samount 100")
+        ct("respawn me "..gplr)
+        char:PivotTo(CFrame.new(50, 0, 0) * char)
+        ct("tp "..gplr.." me")
+        ct("sup hat "..gplr.." 18137588505")
+        ct("sup pm "..gplr.." 😊😚😍😙🤩😙😘😙🤩😙😍😙😍😙🤩😙😍😙🤩😚😍😚🤩😙🤩😚😍😚🤗😚🤩😘😅😚🤩😚😂😚😂😚😍😚😙😅😚😅😚😅😙😅😙😅😙😅")
+        ct("sup hat me 18137588505")
+        ct("spam hat "..gplr.." 18137588505")
+        ct("spam hat me 18137588505")
+        wait(0.5)
+        ct("sup clone me "..gplr)
+        local htarget = game.Players:FindFirstChild(gplr)
+        while htarget do
+          wait()
+        end
+        ct("uns")
+        ct("respawn me")
+      end
+        
       if cmd == "boombox" then
 
         ct("samount "..args2)
