@@ -8,9 +8,11 @@ local anticlone = true
 local anticlientclone = true
 local gearban = false
 local antivg = true
+local antipunish = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
+local getplrs = game.Players:GetPlayers()
 
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
@@ -188,6 +190,14 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         end
       end
 
+      if cmd == "antipunish" then
+        if args1 == "on" then
+          antipunish = true
+        elseif args1 == "off" then
+          antipunish = false
+        end
+      end
+        
       if cmd == "antivg" then
         if args1 == "on" then
           antivg = true
@@ -442,13 +452,10 @@ local gearbanc = coroutine.wrap(function()
       for i, v in pairs(game.Players:GetPlayers()) do
 
         if v ~= lp then
-        
-          for e, r in pairs(v.Backpack:GetChildren()) do
 
-            if r:IsA("Tool") and r ~= nil then
+            if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
 
               ct("reset "..v.Name)
-              ct("fly "..v.Name)
               
             end
             
@@ -464,6 +471,24 @@ local gearbanc = coroutine.wrap(function()
       
 end)
 gearbanc()
+local antipunishc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antipunish then
+
+      if game:GetService("Lightning"):FindFirstChild(lp.Name) then
+
+        ct("unpunish me")
+
+      end
+      
+    end 
+
+  end
+  
+end)
+antipunishc()
 
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
