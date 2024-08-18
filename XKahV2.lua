@@ -56,7 +56,9 @@ local function h(b)
 end
 
 local function Regen()
-  fireclickdetector(rp.ClickDetector)
+  pcall(function()
+    fireclickdetector(rp.ClickDetector)
+  end)
 end
 
 local function a(plr)
@@ -117,9 +119,12 @@ local function a(plr)
       if cmd == "hang" then
         plrcheck(args1)
         anticlone = false
+        wait()
+        Regen()
         ct("samount 100")
         ct("respawn me "..gplr)
-        char:PivotTo(CFrame.new(50, 0, 0) * char:GetPivot())
+        char:PivotTo(CFrame.new(470, 10, -469)
+        wait(0.3)
         ct("tp "..gplr.." me")
         ct("sup hat "..gplr.." 18137588505")
         ct("sup pm "..gplr.." 😊😚😍😙🤩😙😘😙🤩😙😍😙😍😙🤩😙😍😙🤩😚😍😚🤩😙🤩😚😍😚🤗😚🤩😘😅😚🤩😚😂😚😂😚😍😚😙😅😚😅😚😅😙😅😙😅😙😅")
@@ -491,12 +496,14 @@ local gearbanc = coroutine.wrap(function()
       for i, v in pairs(game.Players:GetPlayers()) do
 
         if v ~= lp then
+          pcall(function()
+            if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
 
-          if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
+              ct("reset "..v.Name)
 
-            ct("reset "..v.Name)
+            end
               
-          end
+          end)
             
         end
 
