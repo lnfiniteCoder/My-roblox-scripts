@@ -668,7 +668,7 @@ local antidogc = coroutine.wrap(function()
 end)
 antidogc()
 
-local antimsgc == coroutine.wrap(function()
+local antimsgc = coroutine.wrap(function()
 
   while wait() do
 
