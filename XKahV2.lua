@@ -27,6 +27,7 @@ local rtx = {
 }
 
 local blacklist = {}
+local whitelist = {}
 
 local cmds = {
 
@@ -92,9 +93,8 @@ local function a(plr)
     if plr == game.Players.LocalPlayer then
 
       if cmd == "cmds" then
-
         for i, v in ipairs(cmds) do
-          print(i.. ". "..v)
+          print(i..". "..v)
         end
       end
         
@@ -139,6 +139,27 @@ local function a(plr)
           
       end
 
+      if cmd == "wl" then
+
+        plrcheck(args1)
+        table.insert(whitelist, gplr)
+        for i, v in pairs(whitelist) do
+          print("Player whitelisted!")
+          print(v)
+          wlplr = v
+        end
+      elseif cmd == "unwl" then
+        plrcheck(args1)
+        for i, v in pairs(whitelist) do
+          if gplr == v.Name then
+            table.remove(whitelist, i)
+            print("Player removed!")
+            print(v)
+            wlplr = v
+          end
+        end
+      end
+        
       if cmd == "hang" then
         plrcheck(args1)
         anticlone = false
@@ -146,7 +167,7 @@ local function a(plr)
         Regen()
         ct("samount 100")
         ct("respawn me "..gplr)
-        wait(0.3)
+        wait(1)
         char:PivotTo(CFrame.new(470, 10, -469))
         wait(0.3)
         ct("tp "..gplr.." me")
@@ -157,9 +178,11 @@ local function a(plr)
         ct("spam hat me 18137588505")
         wait(0.5)
         ct("sup clone me "..gplr)
-        local htarget = game.Players:FindFirstChild(gplr)
+        local htarget = true
         while htarget do
-          wait()
+          if not game.Players:FindFirstChild(gplr) then
+            htarget = false
+          end
         end
         ct("uns")
         ct("respawn me")
@@ -491,7 +514,7 @@ local antivgc = coroutine.wrap(function()
 
           if r.Name == "VampireVanquisher" or r.Name == "OrinthianSwordAndShield" then
 
-            if v ~= lp then
+            if v ~= lp or v ~= game.Players:FindFirstChild(wlplr) then
 
               ct("reset "..v.Name)
               ct("punish "..v.Name)
@@ -519,8 +542,9 @@ local gearbanc = coroutine.wrap(function()
     if gearban then
       for i, v in pairs(game.Players:GetPlayers()) do
 
-        if v ~= lp then
+        if v ~= lp and v ~= game.Players:FindFirstChild(wlplr) then
           pcall(function()
+            
             if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
 
               ct("reset "..v.Name)
