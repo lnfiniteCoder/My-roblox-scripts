@@ -10,6 +10,7 @@ local gearban = false
 local antivg = true
 local antipunish = true
 local antidog = true
+local antimsg = false
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -292,6 +293,14 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
       end
 
+      if cmd == "antimsg" then
+        if args1 == "on" then
+          antimsg = true
+        elseif args1 == "off" then
+          antimsg = false
+       end
+     end
+        
       if cmd == "gearban" then
         if args1 == "on" then
           gearban = true
@@ -658,6 +667,28 @@ local antidogc = coroutine.wrap(function()
     
 end)
 antidogc()
+
+local antimsgc == coroutine.wrap(function()
+
+  while wait() do
+
+    if antimsg then
+
+      for i, v in pairs(lp.PlayerGui:GetChildren()) do
+          
+        if v.Name == "MessageGUI" then
+            
+          v:Destroy()
+
+        end
+          
+      end
+        
+    end
+      
+  end
+    
+end)
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
