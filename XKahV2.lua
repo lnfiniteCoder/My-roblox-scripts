@@ -181,6 +181,7 @@ local function a(plr)
         ct("sup clone me "..gplr)
         local htarget = true
         while htarget do
+          wait()
           if not game.Players:FindFirstChild(gplr) then
             htarget = false
           end
