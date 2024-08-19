@@ -9,6 +9,7 @@ local anticlientclone = true
 local gearban = false
 local antivg = true
 local antipunish = true
+local antidog = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -30,7 +31,9 @@ local rtx = {
 
 local blacklist = {}
 local whitelist = {}
+
 wlplr = "a"
+blplr = "b"
 
 local cmds = {
 
@@ -59,13 +62,6 @@ local function plrcheck(plr)
     if plr == string.sub(v.Name:lower(), 1, #plr) or plr == string.sub(v.DisplayName:lower(), 1, #plr) then
       gplr = v.Name
     end
-  end
-end
-
-local function tct(a)
-
-  for _, v in ipairs(a) do
-    ct(v)
   end
 end
 
@@ -162,7 +158,26 @@ local function a(plr)
           end
         end
       end
-        
+      if cmd == "bl" then
+
+        plrcheck(args1)
+        table.insert(blacklist, gplr)
+        for i, v in pairs(blacklist) do
+          print("Player blacklisted!")
+          print(v)
+          blplr = v
+        end
+      elseif cmd == "unbl" then
+        plrcheck(args1)
+        for i, v in ipairs(blacklist) do
+          if gplr == v then
+            table.remove(blacklist, i)
+            print("Player removed!")
+            print(v)
+            blplr = v
+          end
+        end
+      end
       if cmd == "hang" then
         plrcheck(args1)
         anticlone = false
@@ -256,7 +271,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
       if cmd == "Who" then
 
         antivg = false
-          
+        gearban = false
         if args1 == "crashed?" then
           ct("spam gear all 92628079")
           ct("spam unsize all")
@@ -272,7 +287,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
       if cmd == "fakemsg" then
 
         plrcheck(args1)
-        local fm = string.sub(m, string.len(tostring(args1)) + string.len(cmd))
+        local fm = string.sub(tostring(m), string.len(tostring(args1)) + tostring(string.len(cmd)))
         h("\n\n\n"..gplr..": "..fm.."\n\n\n")
 
       end
@@ -348,6 +363,15 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         end
 
       end
+
+      if cmd == "antidog" then
+
+        if args1 == "on" then
+          antidog = true
+        elseif args1 == "off" then
+          antidog = false
+        end
+      end
         
       if cmd == "rtx" then
 
@@ -404,6 +428,32 @@ local admingrab = coroutine.wrap(function()
 
 end)
 admingrab()
+
+local banfunction = coroutine.wrap(function()
+
+  while wait() do
+
+    pcall(function()
+
+      if not lighting:FindFirstChild(blplr) and blplr ~= nil then
+
+        if game.Players:FindFirstChild(blplr) and blplr ~= nil and blplr ~= "Ih0temyIife" then
+        
+          Regen()
+          wait()
+          ct("punish "..blplr)
+          ct("blind "..blplr)
+          ct("skydive "..blplr)
+
+        end
+            
+      end
+          
+    end)
+      
+  end
+    
+end)
 
 local antikillc = coroutine.wrap(function()
 
@@ -586,6 +636,28 @@ local antipunishc = coroutine.wrap(function()
 end)
 antipunishc()
 
+local antidogc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antidog then
+
+      for i, v in pairs(getplrs) do
+
+        if v.Character:FindFirstChildOfClass("Seat") then
+
+          ct("reset "..v.Name)
+            
+        end
+          
+      end
+        
+    end
+      
+  end
+    
+end)
+antidogc()
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
