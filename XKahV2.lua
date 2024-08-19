@@ -153,7 +153,7 @@ local function a(plr)
         end
       elseif cmd == "unwl" then
         plrcheck(args1)
-        for i, v in pairs(whitelist) do
+        for i, v in ipairs(whitelist) do
           if gplr == v then
             table.remove(whitelist, i)
             print("Player removed!")
@@ -170,9 +170,9 @@ local function a(plr)
         Regen()
         ct("samount 100")
         ct("respawn me "..gplr)
-        wait(1)
+        wait(2)
         humanoid2.CFrame = CFrame.new(470, 10, -469)
-        wait(0.3)
+        wait(1)
         ct("tp "..gplr.." me")
         ct("sup hat "..gplr.." 18137588505")
         ct("sup pm "..gplr.." 😊😚😍😙🤩😙😘😙🤩😙😍😙😍😙🤩😙😍😙🤩😚😍😚🤩😙🤩😚😍😚🤗😚🤩😘😅😚🤩😚😂😚😂😚😍😚😙😅😚😅😚😅😙😅😙😅😙😅")
