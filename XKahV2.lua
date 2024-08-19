@@ -28,6 +28,7 @@ local rtx = {
 
 local blacklist = {}
 local whitelist = {}
+wlplr = "a"
 
 local cmds = {
 
