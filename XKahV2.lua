@@ -12,9 +12,11 @@ local antipunish = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
+local humanoid = char:WaitForChild("Humanoid")
+local humanoid2 = char.HumanoidRootPart
+
 local getplrs = game.Players:GetPlayers()
 local lighting = game:GetService("Lighting")
-
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
 local terrain = game:GetService("Workspace").Terrain
@@ -152,7 +154,7 @@ local function a(plr)
       elseif cmd == "unwl" then
         plrcheck(args1)
         for i, v in pairs(whitelist) do
-          if gplr == v.Name then
+          if gplr == v then
             table.remove(whitelist, i)
             print("Player removed!")
             print(v)
@@ -169,7 +171,7 @@ local function a(plr)
         ct("samount 100")
         ct("respawn me "..gplr)
         wait(1)
-        char:PivotTo(CFrame.new(470, 10, -469))
+        humanoid2.CFrame = CFrame.new(470, 10, -469)
         wait(0.3)
         ct("tp "..gplr.." me")
         ct("sup hat "..gplr.." 18137588505")
