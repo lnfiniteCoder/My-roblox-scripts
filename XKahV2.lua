@@ -180,7 +180,6 @@ local function a(plr)
         for i, v in pairs(blacklist) do
           print("Player blacklisted!")
           print(v)
-          blplr = v
         end
       elseif cmd == "unbl" then
         plrcheck(args1)
@@ -189,7 +188,6 @@ local function a(plr)
             table.remove(blacklist, i)
             print("Player removed!")
             print(v)
-            blplr = v
           end
         end
       end
@@ -471,7 +469,6 @@ local banfunction = coroutine.wrap(function()
             ct("skydive "..v)
 
           end
-
 
         end
             
