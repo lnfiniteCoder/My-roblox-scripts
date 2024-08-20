@@ -2,6 +2,8 @@
 
 wait(1)
 
+local xowner = "Ih0temyIife" or "Sans_fromlb"
+
 local antikill = true
 local antihat = true
 local anticlone = true
@@ -584,7 +586,7 @@ local antivgc = coroutine.wrap(function()
 
             for wli, wlv in pairs(whitelist) do
 
-              if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
+              if v.Name ~= xowner or v.Name ~= wlv or v.Name ~= lp then
 
                 ct("reset "..v.Name)
                 ct("punish "..v.Name)
@@ -616,7 +618,7 @@ local gearbanc = coroutine.wrap(function()
           
         for wli, wlv in pairs(whitelist) do
             
-          if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
+          if v.Name ~= xowner or v.Name ~= wlv or v.Name ~= lp then
             pcall(function()
             
               if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
