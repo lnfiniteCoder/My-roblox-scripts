@@ -31,11 +31,8 @@ local rtx = {
   sunrise = {"outdoorambient 0.7 0.7 0.7", "ambient 100 0 100", "fogend 3000", "time 6.9", "colorshifttop 100 50 0", "colorshiftbottom 0 0 0"}
 }
 
-local blacklist = {}
-local whitelist = {}
-
-wlplr = "a"
-blplr = "b"
+local blacklist = {"Raysdamain"}
+local whitelist = {"dawninja21", "1xDark1xSpecies1x", "dawninja21alt"}
 
 local cmds = {
 
@@ -95,13 +92,13 @@ local function a(plr)
 
       if cmd == "XKick" then
           
-        if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
+        if lp.Name ~= "Ih0temyIife" and lp.Name ~= "Sans_fromlb" then
           lp:Kick("You have been kicked by Owner of the script(XK2)")
         end
       end
 
       if cmd == "Xcheck" then
-        if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
+        if lp.Name ~= "Ih0temyIife" and lp.Name ~= "Sans_fromlb" then
               
           ct("h I use Xkahv2 cuz im a skid!")
 
@@ -165,7 +162,6 @@ local function a(plr)
         for i, v in pairs(whitelist) do
           print("Player whitelisted!")
           print(v)
-          wlplr = v
         end
       elseif cmd == "unwl" then
         plrcheck(args1)
@@ -174,7 +170,6 @@ local function a(plr)
             table.remove(whitelist, i)
             print("Player removed!")
             print(v)
-            wlplr = v
           end
         end
       end
@@ -408,15 +403,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
           antidog = false
         end
       end
-        
-      if cmd == "rtx" then
-
-        if args == "sunrise" or "1" then
-          tct(rtx[1])
-        end
-
-      end
-
+      
     end
 
   end)
@@ -471,15 +458,20 @@ local banfunction = coroutine.wrap(function()
 
     pcall(function()
 
-      if not lighting:FindFirstChild(blplr) and blplr ~= nil then
+      for i, v in ipairs(blacklist) do
+          
+        if not lighting:FindFirstChild(v) and v ~= nil then
 
-        if game.Players:FindFirstChild(blplr) and blplr ~= nil and blplr ~= "Ih0temyIife" then
+          if game.Players:FindFirstChild(v) and v ~= nil and blplr ~= "Ih0temyIife" and blplr ~= "Sans_fromlb" then
         
-          Regen()
-          wait()
-          ct("punish "..blplr)
-          ct("blind "..blplr)
-          ct("skydive "..blplr)
+            Regen()
+            wait()
+            ct("punish "..v)
+            ct("blind "..v)
+            ct("skydive "..v)
+
+          end
+
 
         end
             
@@ -605,12 +597,16 @@ local antivgc = coroutine.wrap(function()
 
           if r.Name == "VampireVanquisher" or r.Name == "OrinthianSwordAndShield" then
 
-            if v ~= lp or v ~= game.Players:FindFirstChild(wlplr) then
+            for wli, wlv in ipairs(whitelist) do
 
-              ct("reset "..v.Name)
-              ct("punish "..v.Name)
-              ct("blind "..v.Name)
+              if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
+
+                ct("reset "..v.Name)
+                ct("punish "..v.Name)
+                ct("blind "..v.Name)
                 
+              end
+
             end
 
           end
@@ -632,18 +628,20 @@ local gearbanc = coroutine.wrap(function()
 
     if gearban then
       for i, v in pairs(game.Players:GetPlayers()) do
-
-        if v ~= lp and v ~= game.Players:FindFirstChild(wlplr) then
-          pcall(function()
+        for wli, wlv in ipairs(whitelist) do
+          if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
+            pcall(function()
             
-            if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
+              if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
 
-              ct("reset "..v.Name)
+                ct("reset "..v.Name)
 
-            end
+              end
               
-          end)
+            end)
             
+          end
+          
         end
 
       end
