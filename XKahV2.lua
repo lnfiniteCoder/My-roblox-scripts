@@ -165,7 +165,7 @@ local function a(plr)
         end
       elseif cmd == "unwl" then
         plrcheck(args1)
-        for i, v in ipairs(whitelist) do
+        for i, v in pairs(whitelist) do
           if gplr == v then
             table.remove(whitelist, i)
             print("Player removed!")
@@ -183,8 +183,8 @@ local function a(plr)
         end
       elseif cmd == "unbl" then
         plrcheck(args1)
-        for i, v in ipairs(blacklist) do
-          if gplr == v then
+        for i, v in pairs(blacklist) do
+          if gplr == v and v ~= nil then
             table.remove(blacklist, i)
             print("Player removed!")
             print(v)
