@@ -10,12 +10,13 @@ local gearban = false
 local antivg = true
 local antipunish = true
 local antidog = true
-local antimsg = false
+local antimsg = true
+local antirocket = true
 
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 local humanoid = char:WaitForChild("Humanoid")
-local humanoid2 = char.HumanoidRootPart
+local humanoid2 = char:WaitForChild("HumanoidRootPart")
 
 local getplrs = game.Players:GetPlayers()
 local lighting = game:GetService("Lighting")
@@ -293,6 +294,14 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
       end
 
+      if cmd == "antirocket" then
+        if args1 == "on" then
+          antirocket = false
+        elseif args1 == "off" then
+          antirocket = false
+        end
+      end
+        
       if cmd == "antimsg" then
         if args1 == "on" then
           antimsg = true
@@ -652,13 +661,13 @@ local antidogc = coroutine.wrap(function()
     if antidog then
 
       for i, v in pairs(getplrs) do
+        pcall(function()
+          if v.Character:FindFirstChildOfClass("Seat") then
 
-        if v.Character:FindFirstChildOfClass("Seat") then
-
-          ct("reset "..v.Name)
+            ct("reset "..v.Name)
             
-        end
-          
+          end
+        end)
       end
         
     end
@@ -689,6 +698,38 @@ local antimsgc = coroutine.wrap(function()
   end
     
 end)
+antidogc()
+
+local antirocketc = coroutine.wrap(function()
+
+  while wait() do
+
+    if antirocket then
+
+      for i, v in pairs(getplrs) do
+
+        pcall(function()
+          
+          for e, r in pairs(v.Character:GetChildren()) do
+
+            if r.Name == "Rocket" and r ~= nil then
+
+              r:Destroy()
+                  
+            end
+                
+          end 
+            
+        end)
+          
+      end
+        
+    end
+      
+  end
+    
+end)
+antirocketc()
 wait(1)
 h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
 
