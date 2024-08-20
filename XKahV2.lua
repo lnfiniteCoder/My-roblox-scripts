@@ -107,7 +107,8 @@ local function a(plr)
 
         end
       end
-      
+        
+    end
     if plr == game.Players.LocalPlayer then
 
       if cmd == "cmds" then
