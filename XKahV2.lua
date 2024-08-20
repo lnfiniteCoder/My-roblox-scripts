@@ -253,18 +253,6 @@ local function a(plr)
         end)
 
       end
-        
-      if cmd == "bl" then
-        plrcheck(args1)
-        table.insert(blacklist, gplr)
-      elseif cmd == "unbl" then
-        plrcheck(args1)
-        for i, v in pairs(blacklist) do
-          if v == gplr then
-            table.remove(blacklist, i)
-          end
-        end
-      end
       if cmd == "laser" then
 
       ct("ungear me")
