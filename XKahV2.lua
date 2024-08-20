@@ -472,6 +472,7 @@ local banfunction = coroutine.wrap(function()
   end
     
 end)
+banfunction()
 
 local antikillc = coroutine.wrap(function()
 
