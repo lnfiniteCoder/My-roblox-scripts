@@ -582,7 +582,7 @@ local antivgc = coroutine.wrap(function()
 
           if r.Name == "VampireVanquisher" or r.Name == "OrinthianSwordAndShield" then
 
-            for wli, wlv in ipairs(whitelist) do
+            for wli, wlv in pairs(whitelist) do
 
               if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
 
@@ -613,7 +613,9 @@ local gearbanc = coroutine.wrap(function()
 
     if gearban then
       for i, v in pairs(game.Players:GetPlayers()) do
-        for wli, wlv in ipairs(whitelist) do
+          
+        for wli, wlv in pairs(whitelist) do
+            
           if v ~= lp and v ~= game.Players:FindFirstChild(wlv) and v ~= game.Players:FindFirstChild("Ih0temyIife") and v ~= game.Players:FindFirstChild("Sans_fromlb") then
             pcall(function()
             
