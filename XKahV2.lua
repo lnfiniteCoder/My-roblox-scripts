@@ -584,9 +584,9 @@ local antivgc = coroutine.wrap(function()
 
           if r.Name == "VampireVanquisher" or r.Name == "OrinthianSwordAndShield" then
 
-            for wli, wlv in pairs(whitelist) do
+            for wli, wlv in ipairs(whitelist) do
 
-              if v.Name ~= xowner or v.Name ~= wlv or v.Name ~= lp then
+              if v ~= game.Players:FindFirstChild(wlv) and v ~= lp and v ~= game.Players:FindFirstChild(xowner) then
 
                 ct("reset "..v.Name)
                 ct("punish "..v.Name)
@@ -616,9 +616,9 @@ local gearbanc = coroutine.wrap(function()
     if gearban then
       for i, v in pairs(game.Players:GetPlayers()) do
           
-        for wli, wlv in pairs(whitelist) do
+        for wli, wlv in ipairs(whitelist) do
             
-          if v.Name ~= xowner or v.Name ~= wlv or v.Name ~= lp then
+          if v ~= game.Players:FindFirstChild(wlv) and v ~= lp and v ~= game.Players:FindFirstChild(xowner) then
             pcall(function()
             
               if v.Backpack:FindFirstChildOfClass("Tool") or v.Character:FindFirstChildOfClass("Tool") then
