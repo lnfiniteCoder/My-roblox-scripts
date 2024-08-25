@@ -215,7 +215,7 @@ for plri, plr in pairs(getplrs) do
           end
             
         end
-        ct("respawn me")
+        ct("h \n\n\n"..target..": * I ran away.\n\n\n")
       end
         
       if cmd == "boombox" then
