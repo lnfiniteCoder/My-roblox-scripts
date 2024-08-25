@@ -205,10 +205,11 @@ for plri, plr in pairs(getplrs) do
         Regen()
         ct("setgrav "..target.." -1000")
         ct("jump "..target)
+	wait(0.5)
         ct("size "..target.." 3")
         while plrserv:FindFirstChild(target) do
 
-          wait(1)
+          wait(0.5)
           for i = 1, 100 do
             ct("hat "..gplr.." 18137588505")
           end
