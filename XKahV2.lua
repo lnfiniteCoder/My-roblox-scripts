@@ -393,7 +393,7 @@ end
 
 game.Players.PlayerAdded:Connect(function(v)
 
-  ct("Welcome, "..v)
+  ct("h \n\n\nWelcome, "..v.Name.."\n\n\n")
 
 end)
 
