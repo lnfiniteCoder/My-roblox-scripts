@@ -2,7 +2,7 @@
 
 wait(1)
 
-local xowner = "Ih0temyIife" or "Sans_fromlb"
+xowner = "Ih0temyIife" or "Sans_fromlb"
 
 local antikill = true
 local antihat = true
@@ -205,9 +205,10 @@ for plri, plr in pairs(getplrs) do
         Regen()
         ct("setgrav "..target.." -1000")
         ct("jump "..target)
+        ct("size "..target.." 3")
         while plrserv:FindFirstChild(target) do
 
-          wait(0.1)
+          wait(1)
           for i = 1, 100 do
             ct("hat "..gplr.." 18137588505")
           end
