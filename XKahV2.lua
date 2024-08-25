@@ -18,10 +18,12 @@ local antirocket = true
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 local humanoid = char:WaitForChild("Humanoid")
-local humanoid2 = char:WaitForChild("HumanoidRootPart")
+local humanoid2 = char.HumanoidRootPart
 
 local getplrs = game.Players:GetPlayers()
 local lighting = game:GetService("Lighting")
+local plrserv = game:GetService("Players")
+
 local adminf = game:GetService("Workspace").Terrain["_Game"].Admin
 local rp = game:GetService("Workspace").Terrain["_Game"].Admin:FindFirstChild("Regen")
 local terrain = game:GetService("Workspace").Terrain
@@ -44,17 +46,18 @@ local cmds = {
 "rail plr amnt delay(opt)",
 "laser plr amt delay(opt)",
 "setgplr -- Sets a target",
-"rlua -- runs lua code in chat",
 "hang plr--hatkick",
 "Who crashed -- vg",
 "Who crashed? -- Orinthian vg",
 "Im not showing you antis lol the only thing i tell you is that you turn them on and off by saying on and off after the command",
-"fakemsg plr text --unfinished"
+"fakemsg plr text --unfinished",
+"bl/unbl --Blacklists the player",
+"wl/unwl --Whitelists the player(Whitelist currently is malfunctioning!)"
 }
 
-local function ct(a)
+function ct(a)
 
-  game.Players:Chat(a)
+  game.Players:Chat(tostring(a))
 
 end
 
@@ -66,19 +69,19 @@ local function plrcheck(plr)
   end
 end
 
-local function h(b)
+function h(b)
 
   ct("h "..tostring(b))
 
 end
 
-local function Regen()
+function Regen()
   pcall(function()
     fireclickdetector(rp.ClickDetector)
   end)
 end
 
-local function a(plr)
+for plri, plr in pairs(getplrs) do
 
   plr.Chatted:Connect(function(m)
 
@@ -115,6 +118,16 @@ local function a(plr)
           print(i..". "..v)
         end
       end
+
+      if cmd == "to" then
+        plrcheck(args1)
+				humanoid2.CFrame == plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame
+      end
+				
+      if cmd = "bring" then
+        plrcheck(args1)
+        ct("tp "..gplr.." me")
+      end
         
       if cmd == "re" then
 
@@ -148,13 +161,6 @@ local function a(plr)
 
         plrcheck(args1)
 
-      end
-
-      if cmd == "rlua" then
-
-        -- Ty Python
-        loadstring(m:sub(6))()
-          
       end
 
       if cmd == "wl" then
@@ -195,32 +201,19 @@ local function a(plr)
       end
       if cmd == "hang" then
         plrcheck(args1)
-        anticlone = false
-        wait()
+        local target = gplr
         Regen()
-        ct("samount 100")
-        ct("respawn me "..gplr)
-        wait(2)
-        humanoid2.CFrame = CFrame.new(470, 10, -469)
-        wait(1)
-        ct("tp "..gplr.." me")
-        ct("sup hat "..gplr.." 18137588505")
-        ct("sup pm "..gplr.." 😊😚😍😙🤩😙😘😙🤩😙😍😙😍😙🤩😙😍😙🤩😚😍😚🤩😙🤩😚😍😚🤗😚🤩😘😅😚🤩😚😂😚😂😚😍😚😙😅😚😅😚😅😙😅😙😅😙😅")
-        ct("sup hat me 18137588505")
-        ct("spam hat "..gplr.." 18137588505")
-        ct("spam hat me 18137588505")
-        wait(0.5)
-        ct("sup clone me "..gplr)
-        local htarget = true
-        while htarget do
-          wait()
-          if not game.Players:FindFirstChild(gplr) then
-            htarget = false
+        ct("setgrav "..target.." -1000")
+        ct("jump "..target)
+        while plrserv:FindFirstChild(target) do
+
+          wait(0.1)
+          for i = 1, 100 do
+            ct("hat "..gplr.." 18137588505")
           end
+            
         end
-        ct("uns")
         ct("respawn me")
-        ct("removeclones")
       end
         
       if cmd == "boombox" then
@@ -398,15 +391,9 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
 end
 
-for _, v in ipairs(game.Players:GetPlayers()) do
-
-  a(v)
-
-end
-
 game.Players.PlayerAdded:Connect(function(v)
 
-  a(v)
+  ct("Welcome, "..v)
 
 end)
 
@@ -740,7 +727,7 @@ wait(1)
 if lp.Name == "Ih0temyIife" or lp.Name == "Sans_fromlb" then
   h("\n\n\nOwner of XKahv2 lua has joined the game.\n\n\n")
 else
-  h("\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is ; or no prefix")
+  h("\n\n\n\n\n\nXKahV2(XKV2) has loaded\n\n THIS SCRIPT USES GSCRIPT, TURN IT OFF IF YOU USE IT ALREADY\n\nPrefix is there is no prefix\n\nXKahv2 made by Ih0temyIife")
 end
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
