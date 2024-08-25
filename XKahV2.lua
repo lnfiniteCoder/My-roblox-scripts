@@ -121,7 +121,7 @@ for plri, plr in pairs(getplrs) do
 
       if cmd == "to" then
         plrcheck(args1)
-				humanoid2.CFrame == plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame
+	humanoid2.CFrame == plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame
       end
 				
       if cmd = "bring" then
