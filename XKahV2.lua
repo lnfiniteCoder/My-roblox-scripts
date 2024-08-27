@@ -156,9 +156,8 @@ for plri, plr in pairs(getplrs) do
       end
 
       if cmd == "grail" then
-        plrcheck(args1)
         for i = 1, args2 do
-          ct("gear "..gplr.." 79446473")
+          ct("gear "..args1.." 79446473")
         end
       end
 				
