@@ -149,7 +149,7 @@ for plri, plr in pairs(getplrs) do
           v.GripPos = Vector3.new(math.cos(i) * a - 1.5, h, math.sin(i) * a + 1.5)
         end
       end
-      if cmd = "grippos" then
+      if cmd == "grippos" then
         for i, v in pairs(lp.Backpack:GetChildren()) do
           v.GripPos = Vector3.new(tonumber(args1), tonumber(args2), tonumber(args3))
         end
