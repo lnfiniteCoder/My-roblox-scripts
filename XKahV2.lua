@@ -141,6 +141,27 @@ for plri, plr in pairs(getplrs) do
 
       end
 
+      if cmd == "circulize" then
+
+	      for i, v in pairs(lp.Backpack:GetChildren()) do
+          local a = tonumber(args1)
+          local h = tonumber(args2)
+          v.GripPos = Vector3.new(math.cos(i) * a - 1.5, h, math.sin(i) * a + 1.5)
+        end
+      end
+      if cmd = "grippos" then
+        for i, v in pairs(lp.Backpack:GetChildren()) do
+          v.GripPos = Vector3.new(tonumber(args1), tonumber(args2), tonumber(args3))
+        end
+      end
+
+      if cmd == "grail" then
+        plrcheck(args1)
+        for i = 1, args2 do
+          ct("gear "..gplr.." 79446473")
+        end
+      end
+				
       if cmd == "rail" then
 
       ct("ungear me")
