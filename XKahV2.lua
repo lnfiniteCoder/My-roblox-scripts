@@ -62,10 +62,14 @@ function ct(a)
 end
 
 local function plrcheck(plr)
-  for i, v in pairs(game.Players:GetPlayers()) do
-    if plr == string.sub(v.Name:lower(), 1, #plr) or plr == string.sub(v.DisplayName:lower(), 1, #plr) then
-      gplr = v.Name
+  if plr ~= "others" and plr ~= "me" and plr ~= "all" then
+    for i, v in pairs(game.Players:GetPlayers()) do
+      if plr == string.sub(v.Name:lower(), 1, #plr) or plr == string.sub(v.DisplayName:lower(), 1, #plr) then
+        gplr = v.Name
+      end
     end
+  else
+    gplr = plr
   end
 end
 
@@ -156,8 +160,9 @@ for plri, plr in pairs(getplrs) do
       end
 
       if cmd == "grail" then
+        plrcheck(args1)
         for i = 1, args2 do
-          ct("gear "..args1.." 79446473")
+          ct("gear "..gplr.." 79446473")
         end
       end
 				
