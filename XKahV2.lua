@@ -118,14 +118,14 @@ for plri, plr in pairs(getplrs) do
     if plr == game.Players.LocalPlayer then
 
       if cmd == "cmds" then
-        for i, v in ipairs(cmds) do
+        for i, v in pairs(cmds) do
           print(i..". "..v)
         end
       end
 
       if cmd == "to" then
         plrcheck(args1)
-	humanoid2.CFrame = plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame
+	humanoid2.CFrame = plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame + CFrame.new(0, 5, 0)
       end
 				
       if cmd == "bring" then
