@@ -69,7 +69,7 @@ local function plrcheck(plr)
       end
     end
   else
-    gplr = plr
+    gplr = tostring(plr)
   end
 end
 
