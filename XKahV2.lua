@@ -69,15 +69,9 @@ local function plrcheck(plr)
       end
     end
   elseif plr == "all" then
-    for i, v in pairs(getplrs) do
-      gplr = v.Name
-    end
+    gplr = plr
   elseif plr == "others" then
-    for i, v in pairs(getplrs) do
-      if v ~= lp then
-        gplr = v.Name
-      end
-    end
+    gplr = plr
   elseif plr == "me" then
     gplr = lp.Name
   end
