@@ -321,7 +321,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
         plrcheck(args1)
         local fm = string.sub(tostring(m), string.len(tostring(args1)) + tostring(string.len(cmd)) + 2)
-        h("\n\n\n"..gplr..": "..fm.."\n\n\n")
+        h("\n\n\n"..gplr..":"..fm.."\n\n\n")
 
       end
 
