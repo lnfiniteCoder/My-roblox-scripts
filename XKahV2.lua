@@ -165,7 +165,7 @@ for plri, plr in pairs(getplrs) do
       end
       if cmd == "grippos" then
         for i, v in pairs(lp.Backpack:GetChildren()) do
-          v.GripPos = Vector3.new(m:sub(9)
+          v.GripPos = Vector3.new(m:sub(9))
         end
       end
 
