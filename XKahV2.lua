@@ -692,10 +692,10 @@ local antidogc = coroutine.wrap(function()
 
       for i, v in pairs(getplrs) do
         pcall(function()
-          if v.Character:FindFirstChildOfClass("Seat") then
-
-            ct("reset "..v.Name)
-            
+          for e, r in pairs(v.Character:GetChildren()) do
+            if r:IsA("Seat") and r.Name == "Addon" and r ~= nil then
+              ct("reset "..v.Name)
+						end
           end
         end)
       end
@@ -728,7 +728,7 @@ local antimsgc = coroutine.wrap(function()
   end
     
 end)
-antidogc()
+antimsgc()
 
 local antirocketc = coroutine.wrap(function()
 
