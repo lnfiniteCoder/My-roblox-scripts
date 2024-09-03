@@ -511,21 +511,10 @@ antikillc()
 local antihatc = coroutine.wrap(function()
 
   while wait() do
-
-    if antihat then
+    for i, v in pairs(game:GetDescendants()) do
       pcall(function()
-        for pli, plv in pairs(game.Players:GetPlayers()) do
-        
-          for i, v in pairs(plv.Character:GetChildren()) do
-
-            if v:IsA("Accessory") and v ~= nil then
-
-              v:Destroy()
-
-            end
-
-          end
-          
+        if v:IsA("Accessory") and v ~= nil and antihat then
+            v:Destroy()         
         end
 
       end)
