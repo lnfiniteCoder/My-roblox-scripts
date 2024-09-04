@@ -299,13 +299,20 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
         antivg = false
         gearban = false
+
+        Regen()
+          
         if args1 == "crashed?" then
           ct("spam gear all 92628079")
           ct("spam unsize all")
           ct("spam equipall")
         elseif args1 == "crashed" then
-          ct("spam gear all 94794847")
-          ct("spam unsize all")
+          for i = 1,25 do
+            ct("gear all 94794847")
+          end
+          for i = 1,75 do
+            ct("unsize all all all")
+          end
           ct("spam equipall")
         end
       end
@@ -472,7 +479,9 @@ local banfunction = coroutine.wrap(function()
         
             Regen()
             wait()
-            ct("punish "..v)
+            for i = 1, 100 do
+              ct("punish "..v)
+            end
             ct("blind "..v)
             ct("skydive "..v)
 
