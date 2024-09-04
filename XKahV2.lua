@@ -512,11 +512,13 @@ local antihatc = coroutine.wrap(function()
 
   while wait() do
 
-    for i, v in pairs(game.Players:GetDescendants()) do
+    for i, v in pairs(getplrs) do
+      for e, r in pairs(v.Character:GetDescendants()) do
+        if antihat and r:IsA("Accessory") and r.Name:find("Accessory") and r ~= nil then
 
-      if antihat and v:IsA("Accessory") then
-
-        v:Destroy()
+          r:Destroy()
+      
+        end
 
       end
         
