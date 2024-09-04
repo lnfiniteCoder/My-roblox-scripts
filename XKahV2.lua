@@ -310,10 +310,12 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
           for i = 1,25 do
             ct("gear all 94794847")
           end
+          for i = 1,5 do
+            ct("equipall")
+          end
           for i = 1,75 do
             ct("unsize all all all")
-          end
-          ct("spam equipall")
+					end
         end
       end
 
