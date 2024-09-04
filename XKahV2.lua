@@ -307,13 +307,13 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
           ct("spam unsize all")
           ct("spam equipall")
         elseif args1 == "crashed" then
-          for i = 1,25 do
+          for i = 1,5 do
             ct("gear all 94794847")
           end
-          for i = 1,5 do
+          for i = 1,2 do
             ct("equipall")
           end
-          for i = 1,75 do
+          for i = 1,100 do
             ct("unsize all all all")
 					end
         end
