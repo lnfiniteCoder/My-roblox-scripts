@@ -512,6 +512,8 @@ game.DescendantAdded:Connect(function(des)
 
   if antihat and string.find(des.Name, "Accessory") then
 
+    des:Destroy()
+			
   end
     
 end)
