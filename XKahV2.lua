@@ -508,15 +508,24 @@ local antikillc = coroutine.wrap(function()
 end)
 antikillc()
 
-game.DescendantAdded:Connect(function(des)
+local antihatc = coroutine.wrap(function()
 
-  if antihat and string.find(des.Name, "Accessory") then
+  while wait() do
 
-    des:Destroy()
+    for i, v in pairs(game.Players:GetDescendants()) do
+
+      if antihat and v:IsA("Accessory") and string.find(v.Name, "Accessory") then
+
+        v:Destroy()
+
+      end
+        
+    end
 			
   end
     
 end)
+antihatc()
 
 local anticlonec = coroutine.wrap(function()
 
