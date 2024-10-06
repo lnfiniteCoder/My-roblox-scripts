@@ -527,7 +527,7 @@ local antihatc = coroutine.wrap(function()
 
     for i, v in pairs(game.Players:GetPlayers()) do
       for e, r in pairs(v.Character:GetChildren()) do
-        if antihat and r:IsA("Accessory") and r.Name:find("Accessory") and r ~= nil then
+        if antihat and r:IsA("Accessory") and r ~= nil then
 
           r:Destroy()
       
