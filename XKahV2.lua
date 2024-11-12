@@ -310,9 +310,9 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
         elseif args1 == "crashed" then
           while wait(0.3) do
             ct("gear all 94794847")   
-            backpack:WaitForChild("VampireVanquisher")
-            backpack.VampireVanquisher.Parent = char
-            backpack.VampireVanquisher:Activate()
+            lp.Backpack:WaitForChild("VampireVanquisher")
+            lp.Backpack.VampireVanquisher.Parent = char
+            lp.Backpack.VampireVanquisher:Activate()
             wait()
             for i = 1,100 do
               ct("unsize all all all")
