@@ -130,7 +130,7 @@ for plri, plr in pairs(getplrs) do
 
       if cmd == "to" then
         plrcheck(args1)
-	humanoid2.CFrame = plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame + CFrame.new(0, 5, 0)
+        humanoid2.CFrame = plrserv:FindFirstChild(gplr).Character.HumanoidRootPart.CFrame + CFrame.new(0, 5, 0)
       end
 				
       if cmd == "bring" then
@@ -326,7 +326,7 @@ v.Click:FireServer(game.Players[gplr].Character:GetPivot().Position)
 
         plrcheck(args1)
         local fm = string.sub(tostring(m), string.len(tostring(args1)) + tostring(string.len(cmd)) + 2)
-        h("\n\n\n"..gplr..":"..fm.."\n\n\n")
+        h("\n\n\n\n"..gplr..":"..fm.."\n\n\n\n")
 
       end
 
@@ -525,18 +525,21 @@ local antihatc = coroutine.wrap(function()
 
   while wait() do
 
-    for i, v in pairs(game.Players:GetPlayers()) do
-      for e, r in pairs(v.Character:GetChildren()) do
-        if antihat and r:IsA("Accessory") and r ~= nil then
+    pcall(function()
+      for i, v in pairs(game.Players:GetPlayers()) do
+        for e, r in pairs(v.Character:GetChildren()) do
+          if antihat and r:IsA("Accessory") and r ~= nil then
 
-          r:Destroy()
+            r:Destroy()
       
-        end
+          end
 
-      end
+        end
         
-    end
-			
+      end
+
+    end)
+          
   end
     
 end)
